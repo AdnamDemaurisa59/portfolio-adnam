@@ -1,3 +1,9 @@
+* ::before, ::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 header {
     display: flex;
@@ -171,9 +177,9 @@ img {
 }
 
 
-#projects {
+/* #projects {
     padding: 50px 20px;
-}
+} */
 
 #projects h2 {
     font-size: 36px;
@@ -182,31 +188,55 @@ img {
 }
 
 .projects-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     overflow: hidden;
+    position: relative;
+    width: 100vw;
+}
+
+.carousel-inner {
+    display: flex;
+    justify-content: start;
+    flex-wrap: nowrap;
+    gap: 10px; /* retire les espaces pour assurer un défilement fluide */
+    animation: scroll 15s linear infinite;
+}
+
+/* Stoppe l'animation au survol */
+.carousel-inner:hover {
+    animation-play-state: paused;
 }
 
 .project-card {
-    width: 300px;
+    min-width: 300px; /* fixe la largeur de chaque carte */
     margin: 20px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
-    transition: transform 0.3s;
+    transition: transform 0.5s;
+    border: 1px solid rgb(85, 85, 164);
 }
 
 .project-card:hover {
     transform: scale(1.05);
 }
 
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%); /* ajuste le pourcentage en fonction de la longueur de la duplicata */
+    }
+}
+
+
 .project-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    border-bottom: 1px solid black;
 }
 
 .project-card h3 {
@@ -239,13 +269,11 @@ img {
     background: #d35400;
 }
 
-@keyframes slide {
-    from{
+/* @keyframes slide {
+    from {
         left: 0vw;
-      
     }
-
-    to{
+    to {
         left: -100vw;
     }
 }
@@ -258,16 +286,19 @@ img {
     animation-timing-function: ease-in;
     animation-delay: 0.2s;
     animation-iteration-count: infinite;
+    animation-play-state: running;
+}
 
+/* Stoppe l'animation au survol */
+/* .projects-container:hover {
+    animation-play-state: paused;
 }
 
 @keyframes slide1 {
-    from{
+    from {
         right: -80vw;
-      
     }
-
-    to{
+    to {
         right: 200vw;
     }
 }
@@ -280,7 +311,13 @@ img {
     animation-timing-function: ease-in;
     animation-delay: 0.2s;
     animation-iteration-count: infinite;
- }
+    animation-play-state: running;
+} */
+
+/* Stoppe l'animation du ::after au survol */
+/* .project-container:hover::after {
+    animation-play-state: paused;
+} */
 
  
 #about {

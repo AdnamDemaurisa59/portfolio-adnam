@@ -123,7 +123,7 @@
 
     <section id="projects">
         <h2>Projets</h2>
-        <div class="projects-container">
+        <!-- <div class="projects-container">
                 <div class="project-card">
                     <img src="../images-projetencours/logo-AgriPartenires.jpeg" alt="Project 1">
                     <h3>Agri-partenaires </h3>
@@ -152,10 +152,42 @@
                     <a href="https://malika1526.github.io/Projet-Tea-Station/" class="btn" target="_blank">Voir en direct</a>
                     <a href="https://github.com/Malika1526/Projet-Tea-Station" class="btn" target="_blank">Code source</a>
                 </div>
-                <!-- Ajoutez plus de projets ici -->
-        
-            <!-- Ajoutez plus de projets ici -->
+              
+        </div> -->
+
+        <div class="projects-container">
+            <div class="carousel-inner">
+                <div class="project-card">
+                    <img src="../images-projetencours/logo-AgriPartenires.jpeg" alt="Project 1">
+                    <h3>Agri-partenaires </h3>
+                    <p>Agri-Partenaires propose des services dans le domaine de l'agriculture</p>
+                    <a href="https://adnamdemaurisa59.github.io/Agri-Partenaires1/" class="btn" target="_blank">Voir le site</a>
+                    <a href="https://github.com/AdnamDemaurisa59/Agri-Partenaires1" class="btn" target="_blank">Code source</a>
+                </div>
+                <div class="project-card">
+                    <img src="../images-projetencours/juste-prix/justePrix.gif" alt="Project 2">
+                    <h3>Juste Prix</h3>
+                    <p>Plateforme permettant de jouer à un jeu qui consiste à deviner un nombre</p>
+                    <a href="https://adnamdemaurisa59.github.io/Juste-Prix-JS/" class="btn" target="_blank">Voir le site</a>
+                    <a href="https://github.com/AdnamDemaurisa59/Juste-Prix-JS" class="btn" target="_blank">Code source</a>
+                </div>
+                <div class="project-card">
+                    <img src="../images-projetencours/immobilier/todo-hoverNav.gif" alt="Project 3">
+                    <h3>Immobilier</h3>
+                    <p>Plateforme proposant différents types d'hébergement à prix libre</p>
+                    <a href="https://adnamdemaurisa59.github.io/projet-immobilier/" class="btn" target="_blank">Voir le site</a>
+                    <a href="https://github.com/AdnamDemaurisa59/projet-immobilier" class="btn" target="_blank">Code source</a>
+                </div>
+                <div class="project-card">
+                    <img src="../images-projetencours/tea-station/product-1.jpeg" alt="Project 4">
+                    <h3>Tea Station</h3>
+                    <p>Plateforme proposant différents types de Thé</p>
+                    <a href="https://malika1526.github.io/Projet-Tea-Station/" class="btn" target="_blank">Voir le site</a>
+                    <a href="https://github.com/Malika1526/Projet-Tea-Station" class="btn" target="_blank">Code source</a>
+                </div>
+            </div>
         </div>
+        
     </section>
 
     <section id="about">
@@ -231,7 +263,20 @@
     <script src="../js/profil-adnam.js"></script>
 
     <script>
-        //Code pour le slider de la section projects
+        //Code pour le caroussel de la section projects
+
+        window.onload = (e) => {
+            e.preventDefault();
+            const carouselInner = document.querySelector('.carousel-inner');
+            const projectCards = Array.from(carouselInner.children);
+        
+            // Duplique les éléments pour remplir l'espace et permettre un défilement continu
+            projectCards.forEach(card => {
+                const clone = card.cloneNode(true);
+                carouselInner.appendChild(clone);
+            });
+        };
+        
   
     </script>
 
