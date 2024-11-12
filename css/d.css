@@ -1,0 +1,65 @@
+
+#wrapper{
+    width:900px;
+    -webkit-perspective: 800;
+    -moz-perspective: 800;
+    margin: 150px auto 0 auto;
+  }
+  
+  .carrousel{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    -webkit-transform-style: preserve-3d;
+    -webkit-animation: Caroussel 10s infinite linear;
+    -moz-transform-style: preserve-3d;
+    animation: Caroussel 10s infinite linear;
+  }
+  
+  .plan{
+    position:absolute;
+    height: 150px;
+    width: 140px;
+    text-align:center;
+    font-size: 8em;
+    color:#FFF;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+.p1 img {
+    height: 180px;
+  }
+
+  .p3 img {
+    height: 155px;;
+  }
+
+  .p4 img {
+    height: 160px;
+  }
+  
+  @-webkit-keyframes Caroussel{
+    
+    from { transform: rotateY(0); }
+    to { transform: rotateY(-360deg); }
+  }
+  
+  @-moz-keyframes Caroussel{
+    
+    from { transform: rotateY(0); }
+    to { transform: rotateY(-360deg); }
+  }
+  
+  
+  
+  .p1{ transform: translateZ(200px);}
+  .p2{ transform: rotateY(45deg) translateZ(200px);}
+  .p3{ transform: rotateY(90deg) translateZ(200px);}
+  .p4{ transform: rotateY(135deg) translateZ(200px);}
+
+  
+  .p1{ transform: translateZ(200px);}
+  .p2{ transform: rotateY(45deg) translateZ(200px);}
+  .p3{ transform: rotateY(90deg) translateZ(200px);}
+  .p4{ transform: rotateY(135deg) translateZ(200px);}
+

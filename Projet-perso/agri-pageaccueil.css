@@ -1,0 +1,464 @@
+
+header {
+    background-color: green;
+    padding: 10px;
+    display: flex;
+    position: sticky;
+    top: 0;
+}
+
+header img {
+    width:50px;
+    height:50px;
+    border-radius: 20px;
+    margin-right: 40px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #eef2f3;
+    color: #333;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+}
+
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    position: relative;
+    margin-right: 20px; /* Ajoute un espacement à droite pour chaque lien (ajustez selon vos besoins) */
+    font-weight: bold;
+}
+
+header nav a:hover {
+    border-bottom: 2px solid white; 
+    
+}
+
+.img-logo img {
+    height : 300px;
+    width: 97%;
+    margin: 15px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.title p {
+    font-size: 20px;
+}
+
+.title a {
+    text-decoration: none;
+    color: black;
+}
+
+.title a:hover {
+    text-decoration: underline;
+    color: rgb(54, 48, 48);
+}
+
+.presentation-entreprise {
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentation-entreprise1 {
+    height: 350px;
+}
+
+.presentation-entreprise2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.name-society {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    margin: 5px;
+    background-color: yellow;
+}
+
+.name-society:hover {
+    box-shadow: 0 0 10px;
+}
+
+.introduction {
+    padding: 15px;
+    margin: 5px; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    flex-wrap: wrap;
+}
+
+.introduction:hover {
+    box-shadow: 0 0 10px;
+}
+
+.social-network {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.social-network a {
+    text-decoration: none;
+    color: black;
+}
+
+.social-network a:hover {
+    color: gray;
+}
+
+.objectif {
+    background-color: burlywood;
+    padding: 15px;
+    margin: 5px; 
+}
+
+.objectif:hover {
+    box-shadow: 0 0 10px;
+}
+
+.collaboration {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.collaboration a {
+    text-decoration: none;
+    color: black;
+}
+
+.collaboration a:hover {
+    color: yellowgreen;
+}
+
+.partenaire {
+    margin-left: 40px;
+}
+
+.newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-newsletter {
+    background-image: url('../Projet-perso/img/image2.jpeg');
+    width: 100%;
+    height: 400px; 
+    background-size: cover; /* Pour couvrir toute la zone */
+    background-position: center; /* Pour centrer l'image horizontalement et verticalement */
+    background-repeat: no-repeat; /* Pour éviter la répétition de l'image */
+}
+
+.info-newsletter h1 {
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.newsletter1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    border: 1px solid black;
+    width:800px;
+    height: 100px;
+
+    padding: 10px; 
+    margin-top: 170px;
+}
+
+.newsletter1 h3 {
+    color: white;
+}
+
+.newsletter input {
+    width: 800px;
+    height: 20px;
+}
+
+.submit button {
+    width: 800px ;
+    height: 25px;
+    margin-top: 5px;
+    background-color: yellow;
+}
+
+.title-team {
+    text-align: center;
+}
+
+.team-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 15px;
+}
+
+.team-group img {
+    width: 200px;
+    height: 150px;
+}
+
+.team-group1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.team-group2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.profil1, .profil2, .profil3, .profil4, .profil5, .profil6, .profil7, .profil8, a{
+    text-align: center;
+}
+
+.team-group1 p {
+    text-align: center;
+}
+
+.team-group2 p{
+    text-align: center;
+}
+
+.imgprofil1, .imgprofil2, .imgprofil3, .imgprofil4, .imgprofil5, .imgprofil6, .imgprofil7, .imgprofil8 {
+    border: 1px solid black;
+    width: 200px;
+    height: 150px; 
+}
+
+.partenaire-title {
+    text-align: center;
+}
+.partenaire-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px;
+}
+
+.partenaire1:hover {
+    box-shadow: 0 0 10px;
+    border: 1px solid black;
+}
+
+.partenaire2:hover {
+    box-shadow: 0 0 10px;
+    border: 1px solid black;
+}
+
+.partenaire3:hover {
+    box-shadow: 0 0 10px;
+    border: 1px solid black;
+}
+
+.partenaire4:hover {
+    box-shadow: 0 0 10px;
+    border: 1px solid black;
+}
+
+.partenaire5:hover {
+    box-shadow: 0 0 10px;
+    border: 1px solid black;
+}
+
+.work-title {
+    text-align: center;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%; /* Assurez-vous que le conteneur prend toute la largeur */
+  }
+
+.carousel {
+    position: relative;
+
+  }
+  
+  .carousel-images {
+    width: 100%; /* Assurez-vous que les images prennent toute la largeur */
+    overflow: hidden; /* Pour cacher les images qui dépassent */
+}
+
+.prev,
+.next {
+  position: absolute; /* Position absolue par rapport au conteneur parent */
+  top: 50%; /* Centrez verticalement */
+  transform: translateY(-50%);
+}
+
+.prev {
+    left: 0; /* Alignez le bouton "précédent" à gauche */
+    height: 100px;
+  }
+  
+  .next {
+    right: 0; /* Alignez le bouton "suivant" à droite */
+    height: 100px;
+  }
+
+
+  .carousel-images img.active {
+    display: block;
+  }
+  
+  .carousel-images img {
+    width: 100%;
+    height: 600px;
+    display: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  
+  .caroussel-container button {
+    height: 100px;
+  }
+
+
+.contact {
+    height: 400px;
+    width: 100%;
+    background-color: rgba(96, 90, 90, 0.5); /* Fond noir avec une opacité de 50% */
+    margin-top:15px;
+    margin-bottom: 15px;
+}
+
+.contact-title {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-title h2 {
+    color: white;
+    font-size: 45px;
+}
+
+.contact-mail {
+    text-align: center;
+}
+
+.contact-mail p {
+    color: white;
+}
+
+.contact-nous {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-nous1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-nous2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.submit1 {
+    display: flex;
+    justify-content: center;
+    margin-left: 425px;
+}
+
+.submit1 button {
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin:5px;
+    background-color: yellow;
+}
+
+.submit1 button:hover{
+    background-color: white;
+}
+
+form textarea {
+    border: 1px solid darkgray;
+    padding: 6px;
+    padding-right: 25px;;
+    height: 100px;
+    width: 200px;
+    resize: none;
+}
+
+.textarea textarea{
+    border: 2px solid black;
+    height: 110px;
+}
+
+.contactez-nous1 input {
+    width: 300px;
+    padding: 2px;
+    border: 2px solid black;
+    margin:1px;
+}
+
+.contactez-nous1 input:hover {
+    box-shadow: 10 0 30px;
+
+}
+
+
+
+footer {
+    background-color: rgb(62, 60, 60);
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {     
+    border-bottom: 2px solid white; 
+}
+
