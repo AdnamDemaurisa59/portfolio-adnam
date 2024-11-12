@@ -55,7 +55,7 @@
         <div class="logo">Mon Portfolio</div>
         <nav>
             <ul>
-                <li><a href="./projet-infrastructure-si.html">Accueil</a></li>
+                <li><a href="#home">Accueil</a></li>
                 <li><a href="#skills">Compétences</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#about">À propos</a></li>
@@ -84,7 +84,7 @@
             </div>
         </section>
 
-        <section class="skills">
+        <section class="skills" id="skills">
             <h2>Compétences</h2>
             <div class="container">
                 <div class="box box1">
@@ -125,52 +125,38 @@
         <h2>Projets</h2>
         <div class="projects-container">
                 <div class="project-card">
-                    <img src="../Projet-perso/Logo/logo-AgriPartenires.jpeg" alt="Project 1">
+                    <img src="../images-projetencours/logo-AgriPartenires.jpeg" alt="Project 1">
                     <h3>Agri-partenaires </h3>
-                    <p>Description d'une entreprise proposant leurs service dans le domaine de l'agriculture</p>
-                    <a href="../Projet-perso/agri-pageaccueil.html" class="btn" target="_blank">Voir en direct</a>
-                    <a href="#" class="btn" target="_blank">Code source</a>
+                    <p>Agri-Partenaires est une entreprise proposant des services dans le domaine de l'agriculture</p>
+                    <a href="https://adnamdemaurisa59.github.io/Agri-Partenaires1/" class="btn" target="_blank">Voir en direct</a>
+                    <a href="https://github.com/AdnamDemaurisa59/Agri-Partenaires1" class="btn" target="_blank">Code source</a>
                 </div>
                 <div class="project-card">
-                    <img src="../images-projetencours/Logo-LyakEtudes.jpg" alt="Project 2">
-                    <h3>LYAK-ETUDES</h3>
-                    <p>Plateforme permettant aux étudiants de trouver un stage ou une alternance.</p>
-                    <a href="#" class="btn" target="_blank">Code source</a>
+                    <img src="../images-projetencours/juste-prix/justePrix.gif" alt="Project 2">
+                    <h3>Juste Prix</h3>
+                    <p>Plateforme permettant de jouer à un jeu qui consiste à deviner un nombre</p>
+                    <a href="https://adnamdemaurisa59.github.io/Juste-Prix-JS/" class="btn" target="_blank">Voir en direct</a>
+                    <a href="https://github.com/AdnamDemaurisa59/Juste-Prix-JS" class="btn" target="_blank">Code source</a>
                 </div>
                 <div class="project-card">
-                    <img src="../images-projetencours/MOCKUP.png" alt="Project 3">
-                    <h3>Slider/Caroussel</h3>
-                    <p>Découvrer différents monde parallèle</p>
-                    <a href="#" class="btn" target="_blank">Code source</a>
-                </div>
-                <div class="project-card">
-                    <img src="../images-projetencours/logo.png" alt="Project 4">
-                    <h3>Mindgeek</h3>
+                    <img src="../images-projetencours/immobilier/todo-hoverNav.gif" alt="Project 3">
+                    <h3>Immobilier</h3>
                     <p>Plateforme proposant différents types d'hébergement à prix libre</p>
-                    <a href="#" class="btn" target="_blank">Code source</a>
+                    <a href="https://adnamdemaurisa59.github.io/projet-immobilier/" class="btn" target="_blank">Voir en direct</a>
+                    <a href="https://github.com/AdnamDemaurisa59/projet-immobilier" class="btn" target="_blank">Code source</a>
+                </div>
+                <div class="project-card">
+                    <img src="../images-projetencours/tea-station/product-1.jpeg" alt="Project 4">
+                    <h3>Tea Station</h3>
+                    <p>Plateforme proposant différents types de Thé</p>
+                    <a href="https://malika1526.github.io/Projet-Tea-Station/" class="btn" target="_blank">Voir en direct</a>
+                    <a href="https://github.com/Malika1526/Projet-Tea-Station" class="btn" target="_blank">Code source</a>
                 </div>
                 <!-- Ajoutez plus de projets ici -->
         
             <!-- Ajoutez plus de projets ici -->
         </div>
     </section>
-
-    <div id="wrapper" style="margin-top:200px;">
-        <div class="carrousel">
-            <div class="plan p1">
-                <a href="../Projet-perso/agri-pageaccueil.html" target="_blank"><img src="../Projet-perso/Logo/logo-AgriPartenires.jpeg" alt=""></a>
-            </div>
-            <div class="plan p2">
-                <a href="" target="_blank"><img src="../images-projetencours/Logo-LyakEtudes.jpg" alt=""></a>
-            </div>
-            <div class="plan p3">
-                <a href="" target="_blank"><img src="../images-projetencours/MOCKUP.png" alt=""></a>
-            </div>
-            <div class="plan p4">
-                <a href="" target="_blank"><img src="../images-projetencours/logo.png" alt=""></a>
-            </div>
-        </div>
-      </div>
 
     <section id="about">
         <h2>À propos de moi</h2>
@@ -179,7 +165,6 @@
             <div class="about-text">
                 <p>Je suis un développeur web passionné par le web, j'aime créer des pages webs dynamique, interactif et avec des animations.</p>
                 <p>Je me suis spécialisé en tant que développeur front-end, mais je connais les bases dans le développement backend(API, Base de données, etc..)</p>
-                <!-- Ajoutez plus de texte ici -->
             </div>
         </div>
     </section>
@@ -194,15 +179,16 @@
             <textarea name="message" placeholder="Votre message" required></textarea>
             <button id="btnEnvoyerMail"  class="btn">Envoyer</button>
         </form>
-        <div class="social-links">
-            <div class="github">
-                <a href="https://github.com/AdnamDemaurisa59" target="_blank"><img src="../img/logo_github.png" alt="Photo"></a>
-            </div>
+        <div class="icon-group">
             <div class="linkedin">
-                <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank"><img src="../img/LinkedIn_logo_initials.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank"><i class="fa-brands fa-linkedin"></i></a> 
+              </div>
+            
+            <div class="github">
+                <a href="https://github.com/AdnamDemaurisa59/portfolio-adnam" target="_blank" class="github"><i class="fa-brands fa-github"></i></a>
             </div>
-            <!-- Ajoutez d'autres liens de réseaux sociaux ici -->
         </div>
+            <!-- Ajoutez d'autres liens de réseaux sociaux ici -->
     </section>
 
 
@@ -245,6 +231,12 @@
     <script src="../js/profil-adnam.js"></script>
 
     <script>
+        //Code pour le slider de la section projects
+  
+    </script>
+
+    <script>
+        //Code pour valider le formulaire de contact
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.querySelector('.contact-form');
             const nameInput = form.querySelector('input[name="name"]');
@@ -252,7 +244,7 @@
             const telInput = form.querySelector('input[name="tel"]');
             const emailInput = form.querySelector('input[name="email"]');
             const messageTextarea = form.querySelector('textarea[name="message"]');
-            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            const emailPattern = /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
             
             form.addEventListener('submit', (e) => {
                 let isValid = true;
@@ -290,6 +282,7 @@
     </script>
 
     <script>
+        //Code pour laisser un commentaire et noter le portfolio
         document.addEventListener('DOMContentLoaded', function() {
             const stars = document.querySelectorAll('.comment-form .stars .star');
         

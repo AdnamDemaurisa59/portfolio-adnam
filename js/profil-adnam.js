@@ -1,4 +1,6 @@
 
+"use strict";
+
 gsap.registerPlugin(ScrollTrigger) 
 
 gsap.from( ".skills .box", {
