@@ -18,9 +18,9 @@
     display: flex;
 }
 
-.dot,  .shadow {
-    width: 150px;
-    height: 150px;
+.dot, .shadow {
+    width: 70px;
+    height: 70px;
     background-color: #a86832;
     border-radius: 75px;
     margin : 0 4px;
@@ -33,7 +33,7 @@
 
 .loader img{
     border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;
-    width: 150px;
+    width: 70px;
 }
 
 

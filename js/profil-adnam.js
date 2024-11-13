@@ -35,12 +35,12 @@ gsap.to(".boxC", {
     toggleActions : "play reverse none reset",
 });
 
-gsap.to(".boxB", {
-    y: 50,
-    rotation: 360,
-    duration: 4,
-    toggleActions : "play reverse none reset", 
-})
+// gsap.to(".boxB", {
+//     y: 50,
+//     rotation: 360,
+//     duration: 4,
+//     toggleActions : "play reverse none reset", 
+// })
 
 
 function afficherEmail(nom, prenom, num, email, message) {
