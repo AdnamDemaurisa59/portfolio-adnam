@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +7,15 @@
     <link rel="stylesheet" href="../css/profil-adnam.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        .hero-content {
-            max-width: 500px;
-            padding: 20px;
-            font-size: 2rem;
-            text-align: center;
-            animation: reveal linear ;
-            animation-timeline: view();
-        }
-
         @keyframes reveal{
             from {
                 transform: scale(0);
                 opacity: 0;
             }
             to {
-                transofrm: scale(1);
+                transform: scale(1.0);
                 opacity: 1;
+
             }
         }
 
@@ -35,27 +27,16 @@
             animation-range-start: cover 0%;
             animation-range-end: contain 50%; 
         }
-
-        .img-adnam img{
-            border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;
-            border: 2px solid gray;
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-            animation: reveal linear ;
-            animation-timeline: view();
-            animation-range-start: cover 0%;
-            animation-range-end: contain 50%; 
-        }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">Mon Portfolio</div>
+        <div class="header-title">
+            <a href="#">Koud Demaurisa Adnam</a></div>
         <nav>
             <ul>
-                <li><a href="#home">Accueil</a></li>
+                <li><a href="#header">Accueil</a></li>
                 <li><a href="#skills">Compétences</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#about">À propos</a></li>
@@ -63,30 +44,45 @@
             </ul>
         </nav>
     </header>
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Bonjour, je m'appelle Koud Demaurisa Adnam</h1>
-            <p>Développeur Front-End passionné par le web</p>
-            <a href="#skills" class="btn">En savoir plus</a>
+
+    <section class="animation-presentation" id="header">
+        <!-- 1ère animation -->
+        <div class="presentation">
+            <div class="welcome">
+                <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank">Bienvenue Sur</a>
+            </div>
+                <div class="separation"></div>
+            <div class="my-portfolio">
+                <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank">Mon Portfolio</a>
+            </div>
+        </div>
+
+        <!-- 2ème animation -->
+        <div class="presentation2">
+            <div class="name">
+                <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank">Koud Demaurisa Adnam</a>
+            </div>
+                <div class="separation2"></div>
+            <div class="metier">
+                <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank">Développeur Front-End</a>
+            </div>
         </div>
     </section>
 
     <main>
         <section class="profil-user">
             <div class="profil-adnam">
-                    <div class="profil-adnam2">
-                        <div class="img-adnam">
-                            <div>
-                                <img src="../img/Adnam-Photo CV.jpeg" alt="Photo">
-                            </div>
-                        </div>
+                <div class="profil-adnam2">
+                   <div class="img-adnam">
+                        <img src="../img/Adnam-Photo CV.jpeg" alt="Photo Adnam">
                     </div>
+                </div>
             </div>
         </section>
 
         <section class="skills" id="skills">
             <h2>Compétences</h2>
-            <div class="container">
+            <div class="container-skills">
                 <div class="box box1">
                     <a href="https://developer.mozilla.org/fr/docs/Web/HTML" target="_blank"><img src="../img/logo-HTML.webp" alt="HTML"></a>
                 </div>
@@ -109,13 +105,13 @@
             <h2>Langues Parler</h2>
             <div class="langue-speak">
                 <div class="boxA">
-                    <a href=""><img src="../img/logo-espagne.jpeg"></a>
+                    <a href="https://fr.wikipedia.org/wiki/Espagnol#:~:text=L'espagnol%20(en%20espagnol%20%3A,histoire%20%C3%A0%20l'Empire%20espagnol." target="_blank"><img src="../img/langue-francaise.jpeg"></a>
                 </div>
                 <div class="boxB">
-                    <a href=""><img src="../img/badge_anglais.gif"></a>
+                    <a href="https://fr.wikipedia.org/wiki/Anglais#:~:text=L'anglais%20est%20une%20langue%20germanique%20occidentale%20dont%20l'origine,originaires%20de%20Scandinavie%2C%20de%20Normandie%20(" target="_blank"><img src="../img/badge_anglais.gif"></a>
                 </div>
                 <div class="boxC">
-                    <a href=""><img src="../img/langue-francaise.jpeg"></a>
+                    <a href="https://fr.wikipedia.org/wiki/France" target="_blank"><img src="../img/logo-espagne.jpeg"></a>
                 </div>
             </div>
         </section>
@@ -163,21 +159,21 @@
         <div class="about-container">
             <img src="../img/Adnam-Photo CV.jpeg" alt="Profile Picture">
             <div class="about-text">
-                <p>Je suis un développeur web passionné par le web, j'aime créer des pages webs dynamique, interactif et avec des animations.</p>
-                <p>Je me suis spécialisé en tant que développeur front-end, mais je connais les bases dans le développement backend(API, Base de données, etc..)</p>
+                <p class="">Je suis un développeur web passionné par le web, j'aime créer des pages webs dynamique, interactif et avec des animations.</p>
+                <p class="">Je me suis spécialisé en tant que développeur front-end, mais je connais les bases dans le développement backend(API, Base de données, etc..)</p>
             </div>
         </div>
     </section>
 
     <section id="contact">
         <h2>Contactez-moi</h2>
-        <form id="contactForm" class="contactform">
+        <form action="" method="post" id="contactForm" class="contactform">
             <input type="text" name="name" placeholder="Votre nom" required>
             <input type="text" name="prenom" placeholder="Votre prénom" required>
             <input type="tel" name="tel" placeholder="Votre numéro de téléphone" required>
             <input type="email" name="email" placeholder="Votre email" required>
             <textarea name="message" placeholder="Votre message" required></textarea>
-            <button id="btnEnvoyerMail"  class="btn">Envoyer</button>
+            <button onclick="" id="btnEnvoyerMail"  class="btn">Envoyer</button>
         </form>
         <div class="icon-group">
             <div class="linkedin">

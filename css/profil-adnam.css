@@ -5,6 +5,17 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+
+/* Section HTML - Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -12,10 +23,17 @@ header {
     padding: 20px;
     background: #395C9F;
     color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+
 }
 
-header .logo {
-    font-size: 24px;
+.header-title a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
 }
 
 nav ul {
@@ -33,62 +51,207 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s;
+    padding-right: 9px;
+
 }
 
 nav ul li a:hover {
     text-decoration: underline;
 }
 
-.hero {
-    height: 100vh;
-    background: url('background.jpg') no-repeat center center/cover;
+/* Section HTML - animation-presentation */
+
+/* Première animation */
+.presentation {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
-    text-align: center;
+    height: 30vh;
+    /* background-color: #f1f1f1; */
+    margin-top: 80px;
 }
 
-
-.hero h1 {
-    font-size: 48px;
-    margin: 0;
-}
-
-.hero p {
-    font-size: 24px;
-    margin: 10px 0 20px;
-}
-
-.hero .btn {
-    padding: 10px 20px;
-    background: #f39c12;
-    color: #fff;
+.presentation a {
     text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
+    color: #3A5C9F;
+    font-size: 2rem;
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
-.hero .btn:hover {
-    background: #d35400;
+.separation {
+    height: 140px;
+    width: 5px;
+    border: 3px solid #3A5C9F;
+    background-color: #3A5C9F;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
+
+/* Animations de la 1ère présentation */
+@keyframes anime {
+    0% {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(250px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
-main {
-    color: black;
-    margin: 10px;
+.welcome a {
+    position: relative;
+    animation: anime 3s;
+    display: inline-block;
+    padding-right: 5px;
 }
 
-img {
-    width: 150px;
+.welcome {
+    overflow: hidden;
+}
+
+@keyframes anime1 {
+    0% {
+        transform: translateX(-400px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(-250px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.my-portfolio a {
+    position: relative;
+    animation: anime1 5s;
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.my-portfolio {
+    overflow: hidden;
+}
+
+.welcome a:hover, .my-portfolio a:hover {
+    color: #4e7bd4;
+}
+
+
+/* Deuxième animation - masquée au départ */
+.presentation2 {
+    display: none; /* Masqué initialement */
+    opacity: 0; /* Invisible initialement */
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    /* background-color: #f1f1f1; */
+    margin-top: 80px;
+}
+
+.presentation2 a {
+    text-decoration: none;
+    color: #3A5C9F;
+    font-size: 2rem;
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.separation2 {
+    height: 140px;
+    width: 5px;
+    border: 3px solid #3A5C9F;
+    background-color: #3A5C9F;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Animations de la 2ème présentation */
+@keyframes anime2 {
+    0% {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(250px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.name a {
+    position: relative;
+    animation: anime2 4s;
+    transform: translateX(-400px);
+    animation-fill-mode: forwards;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.name {
+    overflow: hidden;
+}
+
+@keyframes anime3 {
+    0% {
+        transform: translateX(-400px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(-250px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.metier a {
+    position: relative;
+    animation: anime3 6s;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.metier {
+    overflow: hidden;
+}
+
+.name a:hover, .metier a:hover {
+    color: #4e7bd4;
+}
+
+
+/* Section HTML - Profil Adnam avec ma photo */
+
+.img-adnam img{
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;
+    border: 2px solid gray;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    animation: reveal linear ;
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: contain 50%; 
 }
 
 .profil-adnam {
@@ -111,64 +274,7 @@ img {
 }
 
 
-.langue-speak {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.container div {
-    width: 100px;
-    height: 100px;
-    border-radius: 20px;
-    padding: 10px;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    flex-direction: row; 
-    gap:80px;
-    height: 200px;
-}
-
-.box1 img{
-    border-radius: 50%;
-}
-
-.box2 img{
-    border-radius: 50%;
-    height: 150px;
-}
-
-.box3 img{
-    border-radius: 50%;
-    height: 150px;
-}
-
-.box4 img{
-    border-radius: 50%;
-    height: 150px;
-}
-
-.box5 img{
-    border-radius: 50%;
-}
-
-.boxA img {
-    border-radius: 50%;
-}
-
-.boxB img {
-    border-radius: 50%;
-}
-
-.boxC img {
-    border-radius: 50%;
-}
-
+/* Section HTML - Compétences */
 
 .skills {
     padding: 50px 20px;
@@ -177,17 +283,69 @@ img {
     width: 100%;
 }
 
-/* #projects {
-    padding: 50px 20px;
-} */
+.container-skills {
+    display: flex;
+    justify-content: center;
+    flex-direction: row; 
+    gap:80px;
+    height: 200px;
+}
+
+.container-skills img {
+    border-radius: 50%;
+}
+
+.box1 img{
+    height: 150px;
+}
+
+.box2 img{
+    height: 150px;
+}
+
+.box3 img{
+    height: 150px;
+}
+
+.box4 img{
+    height: 150px;
+    width: 150px;
+}
+
+.box5 img{
+    height: 150px;
+    width: 150px;
+}
+
+
+/* Section HTML - Langues Parler */
+.langue-speak {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.langue-speak img {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+
+/* Section HTML - Projets */
+
+#projects {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
 #projects h2 {
     font-size: 36px;
     text-align: center;
     margin-bottom: 20px;
 }
-
-
 
 .project-card img {
     width: 100%;
@@ -218,15 +376,11 @@ img {
 }
 
 .project-card .btn:hover {
-    background: #d35400;
+    background: #e67e22;
 }
 
 
-.project-card .btn:hover {
-    background: #d35400;
-}
-
- 
+/* Section HTML - À propos de moi */
 #about {
     padding: 50px 20px;
     background: #f7f7f7;
@@ -258,6 +412,8 @@ img {
     text-align: left;
 }
 
+
+/* Section HTML - Contactez-moi */
 #contact {
     padding: 50px 20px;
     text-align: center;
@@ -345,10 +501,11 @@ form textarea {
     resize: none;
 }
 
-
+/* Section HTML - Commentaires et Notations */
 #comments {
     padding: 40px 20px;
     background-color: #f9f9f9;
+    margin-bottom: 50px;
 }
 
 .comment-form {
@@ -417,6 +574,7 @@ form textarea {
 }
 
 
+/* Section HTML - Footer */
 footer {
     padding: 20px;
     background: #395C9F;
@@ -435,7 +593,49 @@ footer .footer-nav a:hover {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 700px) {
+
+/* Media Queries */
+
+/* Media Query pour les smartphones */
+@media screen and (max-width: 750px) {
+
+    header nav ul {
+        display: none;
+    }
+
+    .presentation a, .presentation2 a{
+        font-size: 20px;
+    }
+
+    .separation, .separation2 {
+        height: 100px;
+        width: 5px;
+    }
+
+    .skills {
+        padding: 20px;
+        background: #f7f7f7;
+        height: 1020px;
+        width: 100%;
+    }
+
+    .container-skills {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+        padding-top: 370px;
+    }
+
+    .langue-speak {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 60px;
+        padding-top: 30px;
+    }
    
     .projects-container {
         overflow: hidden;
@@ -468,9 +668,82 @@ footer .footer-nav a:hover {
         transform: scale(1.05);
     }
 
+    .footer-nav {
+        display: none;
+    }
+
 }
 
-@media screen and (min-width: 700px) {
+/* Media Query pour les tablettes */
+@media screen and (min-width: 750px) and (max-width: 1000px) {
+
+    .skills {
+        padding: 20px;
+        background: #f7f7f7;
+        text-align: center;
+        width: 100%;
+        height: 470px;
+    }
+    
+    .container-skills {
+        display: flex;
+        justify-content: center;
+        flex-direction: row; 
+        flex-wrap: wrap;
+        gap:80px;
+        height: 200px;
+    }
+
+    .projects-container {
+        overflow: hidden;
+        position: relative;
+        width: 100vw;
+    }
+
+    .carousel-inner {
+        display: flex;
+        justify-content: start;
+        flex-wrap: nowrap;
+        gap: 10px; /* retire les espaces pour assurer un défilement fluide */
+        animation: scroll 15s linear infinite;
+    }
+
+    /* Stoppe l'animation au survol */
+    .carousel-inner:hover {
+        animation-play-state: paused;
+    }
+
+    .project-card {
+        min-width: 300px; /* fixe la largeur de chaque carte */
+        margin: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.5s;
+        border: 1px solid rgb(85, 85, 164);
+        cursor: pointer;
+    }
+
+    .project-card:hover {
+        transform: scale(1.05);
+    }
+
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%); /* ajuste le pourcentage en fonction de la longueur de la duplicata */
+        }
+    
+}
+
+}
+
+/* Media Query pour les ordinateurs */
+@media screen and (min-width: 1000px) {
 
     .projects-container {
         overflow: hidden;

@@ -5,9 +5,9 @@ gsap.registerPlugin(ScrollTrigger)
 
 gsap.from( ".skills .box", {
     scrollTrigger : {
-        trigger : ".skills .container",
+        trigger : ".skills .container-skills",
         toggleActions : "play reverse none reset",
-        markers: false,
+        markers: true,
         start : "top 60%",
         end: "bottom 30%",
 
@@ -21,19 +21,19 @@ gsap.from( ".skills .box", {
 
 });
 
-gsap.to(".boxA", {
-    x: 935,
-    rotation: 360,
-    duration: 4,
-    toggleActions : "play reverse none reset",
-});
+// gsap.to(".boxA", {
+//     x: 935,
+//     rotation: 360,
+//     duration: 4,
+//     toggleActions : "play reverse none reset",
+// });
 
-gsap.to(".boxC", {
-    x: -935,
-    rotation: 360,
-    duration: 4,
-    toggleActions : "play reverse none reset",
-});
+// gsap.to(".boxC", {
+//     x: -935,
+//     rotation: 360,
+//     duration: 4,
+//     toggleActions : "play reverse none reset",
+// });
 
 // gsap.to(".boxB", {
 //     y: 50,
@@ -66,3 +66,22 @@ function script() {
 }
 
 script();
+
+
+const firstPresentation = document.querySelector('.presentation');
+const secondPresentation = document.querySelector('.presentation2');
+
+// Ajoute un écouteur qui détecte la fin de l'animation de la première section
+firstPresentation.addEventListener('animationend', () => {
+
+    firstPresentation.style.transition = 'opacity 6s ease';
+    firstPresentation.style.opacity = '0';
+
+    // Attend la fin de la transition pour afficher la deuxième section
+    setTimeout(() => {
+        firstPresentation.style.display = 'none'; // Masque la première section
+        secondPresentation.style.display = 'flex'; // Affiche la deuxième section
+        secondPresentation.style.transition = 'opacity 6s ease';
+        secondPresentation.style.opacity = '1';
+    }, 5200);
+});
