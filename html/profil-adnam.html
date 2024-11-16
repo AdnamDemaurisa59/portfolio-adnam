@@ -6,6 +6,7 @@
     <title>Mon portfolio</title>
     <link rel="stylesheet" href="../css/profil-adnam.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../js/profil-adnam.js" defer></script>
     <style>
         @keyframes reveal{
             from {
@@ -33,8 +34,14 @@
 
     <header>
         <div class="header-title">
-            <a href="#">Koud Demaurisa Adnam</a></div>
-        <nav>
+            <div>
+                <a href="#">Mon Portfolio</a>
+            </div>
+            <button class="mobile-menu-toggle">
+                <i class="fa-solid fa-bars"></i>                
+            </button> 
+        </div>
+        <nav class="parcourir">
             <ul>
                 <li><a href="#header">Accueil</a></li>
                 <li><a href="#skills">Compétences</a></li>
@@ -66,6 +73,30 @@
             <div class="metier">
                 <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank">Développeur Front-End</a>
             </div>
+        </div>
+    </section>
+
+    <section class="">
+        <div class="menu-mobile" id="">
+            <nav class="mobile-nav">
+                <div class="close-nav" id="close-nav">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <a href="#header"><i class="fa-solid fa-house"></i> Accueil</a>
+                <a href="#skills"><i class="fa-solid fa-dumbbell"></i> Compétences</a>
+                <a href="#projects"><i class="fa-solid fa-suitcase"></i> Projets</a>
+                <a href="#about"><i class="fa-regular fa-address-card"></i> À propos de moi</a>
+                <a href="#contact"><i class="fa-regular fa-message"></i> Contact</a>
+                <div class="icon-github">
+                    <a href="https://github.com/AdnamDemaurisa59/portfolio-adnam" target="_blank">
+                        <i class="fa-brands fa-github"></i> GITHUB 
+                    </a>
+                </div>
+                <div class="icon-linkedin">
+                    <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i> Koud Demaurisa Adnam</a>
+                </div>
+            </nav>
         </div>
     </section>
 
@@ -167,13 +198,13 @@
 
     <section id="contact">
         <h2>Contactez-moi</h2>
-        <form action="" method="post" id="contactForm" class="contactform">
-            <input type="text" name="name" placeholder="Votre nom" required>
-            <input type="text" name="prenom" placeholder="Votre prénom" required>
-            <input type="tel" name="tel" placeholder="Votre numéro de téléphone" required>
-            <input type="email" name="email" placeholder="Votre email" required>
-            <textarea name="message" placeholder="Votre message" required></textarea>
-            <button onclick="" id="btnEnvoyerMail"  class="btn">Envoyer</button>
+        <form action="mailto:adnam.kouddemaurisa@outlook.fr" method="post" id="contactForm" class="contactform">
+            <input type="text" id="nom" name="name" placeholder="Votre nom" required minlength="2" maxlength="50">
+            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required minlength="2" maxlength="50">
+            <input type="tel" id="num" name="tel" placeholder="Votre numéro de téléphone" required pattern="[0-9]{10}" title="Entrez un numéro de téléphone à 10 chiffres">
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" id="message" placeholder="Votre message" required minlength="10" maxlength="500"></textarea>
+            <button type="submit" id="btnEnvoyerMail"  class="btn">Envoyer</button>
         </form>
         <div class="icon-group">
             <div class="linkedin">
@@ -192,7 +223,7 @@
         <h2>Commentaires et Notations</h2>
         <div class="comment-form">
             <h3>Laissez un commentaire et votre avis sur mon portfolio</h3>
-            <form id="commentForm">
+            <form id="commentForm" method="post">
                 <textarea name="comments" placeholder="Votre commentaire" required></textarea>
                 <div class="rating">
                     <div class="stars" data-rating="0">
@@ -224,7 +255,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="../js/profil-adnam.js"></script>
 
     <script>
         //Code pour le caroussel de la section projects
@@ -323,8 +353,37 @@
                 });
             }
         });
+    </script>
 
-        
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sélectionne les éléments nécessaires
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const closeNav = document.getElementById('close-nav');
+    
+            // Lorsque le bouton du menu est cliqué
+            menuToggle.addEventListener('click', function() {
+                mobileNav.classList.toggle('open');
+                menuToggle.classList.add('hidden');
+            });
+    
+            // Lorsque le bouton de fermeture est cliqué
+            closeNav.addEventListener('click', function() {
+                mobileNav.classList.remove('open');
+                menuToggle.classList.remove('hidden');
+            });
+    
+            // Si un clic est fait en dehors du menu ouvert, cela ferme le menu
+            document.addEventListener('click', function(event) {
+                if (!menuToggle.contains(event.target) && !mobileNav.contains(event.target)) {
+                    if (mobileNav.classList.contains('open')) {
+                        mobileNav.classList.remove('open');
+                        menuToggle.classList.remove('hidden');
+                    }
+                }
+            });
+        });
     </script>
 
 

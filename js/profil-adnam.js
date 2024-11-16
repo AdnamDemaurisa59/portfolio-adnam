@@ -43,8 +43,9 @@ gsap.from( ".skills .box", {
 // })
 
 
+// Code pour l'envoi de mail
 function afficherEmail(nom, prenom, num, email, message) {
-    let contact = "adnam.kouddemaurisa@ynov.com";
+    let contact = "adnam.kouddemaurisa@outlook.fr";
     let subject = "1er Contact";
     let body = message;
     let mailto = `mailto:${contact}?subject=${subject}&body=Bonjour,%0A%0A$${encodeURIComponent(body)}%0A%0ABien Cordialement%0A%0A${nom} ${prenom}%0A%0A${num}`;
@@ -52,21 +53,25 @@ function afficherEmail(nom, prenom, num, email, message) {
 }
 
 
-function script() {
-    let contactForm = document.getElementById("contactForm");
-    document.getElementById("btnEnvoyerMail").addEventListener("click", (event) => {
-        event.preventDefault();
-        let nom = document.getElementById("nom").value;
-        let prenom = document.getElementById("prenom").value;
-        let num = document.getElementById("num").value;
-        let email = document.getElementById("email").value;
-        let message = document.getElementById("message").value;
-        afficherEmail(nom, prenom, num, email, message);
-    });
-}
+// Code pour le formulaire de contact
+// function script() {
+//     let contactForm = document.getElementById("contactForm");
+//     document.getElementById("btnEnvoyerMail").addEventListener("click", (event) => {
+//         event.preventDefault();
+//         let nom = document.getElementById("nom").value;
+//         let prenom = document.getElementById("prenom").value;
+//         let num = document.getElementById("num").value;
+//         let email = document.getElementById("email").value;
+//         let message = document.getElementById("message").value;
+//         afficherEmail(nom, prenom, num, email, message);
+//     });
+// }
 
-script();
+// script();
 
+
+
+// Code pour l'animation de la section de présentation
 
 const firstPresentation = document.querySelector('.presentation');
 const secondPresentation = document.querySelector('.presentation2');

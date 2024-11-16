@@ -240,6 +240,10 @@ nav ul li a:hover {
 }
 
 
+/* Section HTML - Accueil Menu */
+
+
+
 /* Section HTML - Profil Adnam avec ma photo */
 
 .img-adnam img{
@@ -599,6 +603,16 @@ footer .footer-nav a:hover {
 /* Media Query pour les smartphones */
 @media screen and (max-width: 750px) {
 
+    .header-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #395C9F;
+        color: #fff;
+        width: 100%;
+
+    }
+
     header nav ul {
         display: none;
     }
@@ -672,10 +686,129 @@ footer .footer-nav a:hover {
         display: none;
     }
 
+    /* Section HTML - Accueil Menu */
+
+    .menu-mobile {
+        position: relative;
+        z-index: 5;
+    }
+
+    .icon-linkedin i {
+        color: #1766C2;
+        padding-top: 15px;
+    }
+
+    .icon-linkedin i:hover {
+        color: #1766C2;
+        transform: scale(1.4);
+        transition: transform 0.3s;
+        cursor: pointer;
+    }
+
+
+    /* Style pour le bouton de fermeture */
+    .close-nav {
+        color: red;
+        font-size: 30px;
+        cursor: pointer;
+        position: relative;
+        left: 260px; /* Aligne le bouton à droite dans le menu */
+    }
+
+    .close-nav:hover {
+        color: rgb(206, 110, 110);
+    }
+
+    /* Style pour le bouton menu mobile */
+    .mobile-menu-toggle {
+        background: none;
+        border: none;
+        font-size: 35px;
+        cursor: pointer;
+        color: white;
+        display: block; /* Assure que l'icône du menu est visible par défaut */
+        padding-right: 40px;
+    }
+
+    .mobile-menu-toggle:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s;
+        cursor: pointer;
+    }
+
+    /* Style pour le menu mobile avec positionnement */
+    .mobile-nav {
+        position: fixed; /* Le menu est fixe pour toujours être visible */
+        top: 0;
+        left: -100%; /* Menu hors de l'écran à gauche */
+        width: 300px; 
+        height: 100%; 
+        border-right: 3px solid black;
+        background-color: #f1f5f8;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        transition: left 0.8s ease; /* Transition douce pour le déplacement */
+    }
+
+    /* Quand le menu est ouvert, il apparaît à gauche */
+    .mobile-nav.open {
+        left: 0; /* Le menu glisse depuis la gauche */
+    }
+
+    .mobile-nav a {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        text-decoration: none;
+        padding-top: 15px;
+        color: black;
+    }
+
+    .mobile-nav a:hover {
+        text-decoration: underline;
+    }
+
+    .mobile-nav i {
+        font-size: 20px;
+        margin-right: 5px;
+    }
+
+    .mobile-nav i:hover {
+        transform: scale(1.4);
+        transition: transform 0.3s;
+        margin-right: 2px;
+        cursor: pointer;
+    }
+
+    .icon-github i {
+        color: #222222; 
+        background-color: #fff;
+        border-radius: 50%;
+        transition: background-color 0.3s, color 0.3s; /* Transition douce */
+    }
+
+    .icon-github {
+        padding-top: 10px;
+    }
+
+    .icon-github i:hover {
+        color: #fff;
+        background-color: #222222;
+        border-radius: 50%;
+        transform: scale(1.5);
+        transition: transform 0.3s;
+        margin-right: 2px;
+        cursor: pointer;
+    }
+
 }
 
 /* Media Query pour les tablettes */
 @media screen and (min-width: 750px) and (max-width: 1000px) {
+
+    .mobile-nav, .mobile-menu-toggle {
+        display: none; /* Masque le menu mobile sur les tablettes */
+    }
 
     .skills {
         padding: 20px;
@@ -744,6 +877,10 @@ footer .footer-nav a:hover {
 
 /* Media Query pour les ordinateurs */
 @media screen and (min-width: 1000px) {
+
+    .mobile-nav, .mobile-menu-toggle {
+        display: none; /* Masque le menu mobile sur les ordinateurs */
+    }
 
     .projects-container {
         overflow: hidden;
