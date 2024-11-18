@@ -90,3 +90,60 @@ firstPresentation.addEventListener('animationend', () => {
         secondPresentation.style.opacity = '1';
     }, 5200);
 });
+
+
+// Code pour l'animation de la section PROJECTS - SCROLL + INTERSECTION OBSERVER - pour Ecran mobile
+const projectCards = document.querySelectorAll(".carousel-inner div");
+
+// Observateur pour la section PROJECTS
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Animation lorsque l'élément entre dans le viewport
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateX(0)';
+            // Pour désactiver l'observation après l'animation :
+            // observer.unobserve(entry.target);
+        } else {
+            // Animation inverse lorsque l'élément sort du viewport
+            entry.target.style.opacity = '0';
+            entry.target.style.transform = 'translateX(-20px)';
+        }
+    });
+}, {
+    root: null, 
+    threshold: 0.5 
+});
+
+
+// Vérifie si l'écran est un écran mobile
+const isMobile = window.matchMedia("(max-width: 750px)");
+
+// Fonction permettant d'ajouter les cartes au gestionnaire d'observation
+function handleCardsOnMobile() {
+    // const isMobile = window.matchMedia("(max-width: 750px)");
+    const projectCards = document.querySelectorAll(".project-card");
+    if (isMobile.matches) { // Vérification si on est sur un écran mobile
+        projectCards.forEach(card => {
+            card.style.transition = "transform 0.5s, opacity 0.5s"; // Assure une transition
+            // card.style.transform = 'translateX(20px)'; // Décalage
+            observer.observe(card); // Ajoute la carte à l'observateur
+        });
+    }
+    else {
+        projectCards.forEach(card => {
+            observer.unobserve(card); // Retire la carte de l'observateur
+            card.style.opacity = "1"; // Assure qu'elles sont visibles
+            card.style.transform = ""; // Supprime les transformations
+        });
+    }
+}
+
+// Appel la fonction au chargement de la page
+handleCardsOnMobile();
+
+// Ce code permet de détecter le redimensionnement
+window.addEventListener("resize", handleCardsOnMobile);
+
+// Ce code permet de détecter les changements dynamiques
+isMobile.addEventListener("change", handleCardsOnMobile);

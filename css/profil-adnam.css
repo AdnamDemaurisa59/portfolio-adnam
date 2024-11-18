@@ -61,6 +61,9 @@ nav ul li a:hover {
 
 /* Section HTML - animation-presentation */
 
+.animation-presentation a{
+    text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC, 2px 2px 2px rgba(206,89,55,0);}
+
 /* Première animation */
 .presentation {
     display: flex;
@@ -799,6 +802,53 @@ footer .footer-nav a:hover {
         transition: transform 0.3s;
         margin-right: 2px;
         cursor: pointer;
+    }
+
+    .contactform input, .contactform textarea {
+        width: 90%;
+    }
+
+    .contactform button {
+        padding: 10px 20px;
+        width: 90%;
+    }
+
+    .comment-form {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .comment-form h3 {
+        font-size: 15px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+        /* CSS Animation - Section Projects - Intersection Observer */
+    .carousel-inner div{
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;;
+
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Transition pour le fondu et le déplacement */
+        cursor: pointer;
+        /* overflow: hidden; */
+        
+
+    }
+    .carousel-inner div:nth-child(even){
+        transition: opacity 0.5s ease;
+    }
+    .carousel-inner div:nth-child(odd){
+        transition: opacity 0.5s ease;
+    }
+
+    .clone {
+        display: none;
     }
 
 }
