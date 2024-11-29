@@ -1,46 +1,4 @@
 
-"use strict";
-
-gsap.registerPlugin(ScrollTrigger) 
-
-gsap.from( ".skills .box", {
-    scrollTrigger : {
-        trigger : ".skills .container-skills",
-        toggleActions : "play reverse none reset",
-        markers: true,
-        start : "top 60%",
-        end: "bottom 30%",
-
-    },
-    y: 100,
-    opacity: 0,
-    scale: 0,
-    ease: "elastic.out(0.4, 0.15)",
-    duration: 1,
-    stagger: 0.5,
-
-});
-
-// gsap.to(".boxA", {
-//     x: 935,
-//     rotation: 360,
-//     duration: 4,
-//     toggleActions : "play reverse none reset",
-// });
-
-// gsap.to(".boxC", {
-//     x: -935,
-//     rotation: 360,
-//     duration: 4,
-//     toggleActions : "play reverse none reset",
-// });
-
-// gsap.to(".boxB", {
-//     y: 50,
-//     rotation: 360,
-//     duration: 4,
-//     toggleActions : "play reverse none reset", 
-// })
 
 
 // Code pour l'envoi de mail
@@ -70,80 +28,111 @@ function afficherEmail(nom, prenom, num, email, message) {
 // script();
 
 
-
-// Code pour l'animation de la section de présentation
-
-const firstPresentation = document.querySelector('.presentation');
-const secondPresentation = document.querySelector('.presentation2');
-
-// Ajoute un écouteur qui détecte la fin de l'animation de la première section
-firstPresentation.addEventListener('animationend', () => {
-
-    firstPresentation.style.transition = 'opacity 6s ease';
-    firstPresentation.style.opacity = '0';
-
-    // Attend la fin de la transition pour afficher la deuxième section
-    setTimeout(() => {
-        firstPresentation.style.display = 'none'; // Masque la première section
-        secondPresentation.style.display = 'flex'; // Affiche la deuxième section
-        secondPresentation.style.transition = 'opacity 6s ease';
-        secondPresentation.style.opacity = '1';
-    }, 5200);
-});
-
-
-// Code pour l'animation de la section PROJECTS - SCROLL + INTERSECTION OBSERVER - pour Ecran mobile
-const projectCards = document.querySelectorAll(".carousel-inner div");
-
-// Observateur pour la section PROJECTS
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            // Animation lorsque l'élément entre dans le viewport
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateX(0)';
-            // Pour désactiver l'observation après l'animation :
-            // observer.unobserve(entry.target);
-        } else {
-            // Animation inverse lorsque l'élément sort du viewport
-            entry.target.style.opacity = '0';
-            entry.target.style.transform = 'translateX(-20px)';
+//Code pour valider le formulaire de contact
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('.contact-form');
+    const nameInput = form.querySelector('input[name="name"]');
+    const prenomInput = form.querySelector('input[name="prenom"]');
+    const telInput = form.querySelector('input[name="tel"]');
+    const emailInput = form.querySelector('input[name="email"]');
+    const messageTextarea = form.querySelector('textarea[name="message"]');
+    const emailPattern = /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    
+    form.addEventListener('submit', (e) => {
+        let isValid = true;
+        
+        if (nameInput.value.trim() === '') {
+            isValid = false;
+            alert('Veuillez entrer votre nom.');
+        }
+        
+        if (prenomInput.value.trim() === '') {
+            isValid = false;
+            alert('Veuillez entrer votre prénom.');
+        }
+        
+        if (telInput.value.trim() === '') {
+            isValid = false;
+            alert('Veuillez entrer votre numéro de téléphone.');
+        }
+        
+        if (!emailPattern.test(emailInput.value.trim())) {
+            isValid = false;
+            alert('Veuillez entrer une adresse email valide.');
+        }
+        
+        if (messageTextarea.value.trim() === '') {
+            isValid = false;
+            alert('Veuillez entrer un message.');
+        }
+        
+        if (!isValid) {
+            e.preventDefault();
         }
     });
-}, {
-    root: null, 
-    threshold: 0.5 
 });
 
 
-// Vérifie si l'écran est un écran mobile
-const isMobile = window.matchMedia("(max-width: 750px)");
+// Code pour le menu mobile
+document.addEventListener('DOMContentLoaded', function() {
 
-// Fonction permettant d'ajouter les cartes au gestionnaire d'observation
-function handleCardsOnMobile() {
-    // const isMobile = window.matchMedia("(max-width: 750px)");
-    const projectCards = document.querySelectorAll(".project-card");
-    if (isMobile.matches) { // Vérification si on est sur un écran mobile
-        projectCards.forEach(card => {
-            card.style.transition = "transform 0.5s, opacity 0.5s"; // Assure une transition
-            // card.style.transform = 'translateX(20px)'; // Décalage
-            observer.observe(card); // Ajoute la carte à l'observateur
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const closeNav = document.getElementById('close-nav');
+
+    // Lorsque le bouton du menu est cliqué
+    menuToggle.addEventListener('click', function() {
+        mobileNav.classList.toggle('open');
+        menuToggle.classList.add('hidden');
+    });
+
+    // Lorsque le bouton de fermeture est cliqué
+    closeNav.addEventListener('click', function() {
+        mobileNav.classList.remove('open');
+        menuToggle.classList.remove('hidden');
+    });
+
+    // Si un clic est fait en dehors du menu ouvert, cela ferme le menu
+    document.addEventListener('click', function(event) {
+        if (!menuToggle.contains(event.target) && !mobileNav.contains(event.target)) {
+            if (mobileNav.classList.contains('open')) {
+                mobileNav.classList.remove('open');
+                menuToggle.classList.remove('hidden');
+            }
+        }
+    });
+});
+
+
+// ----------------------------Code pour laisser un commentaire et noter le portfolio--------------------------------------------------------
+ document.addEventListener('DOMContentLoaded', function() {
+    const stars = document.querySelectorAll('.comment-form .stars .star');
+
+    stars.forEach(star => {
+        star.addEventListener('click', function() {
+            const ratingValue = this.dataset.value;
+            const starsContainer = this.parentNode;
+            starsContainer.dataset.rating = ratingValue;
+            updateRatingValue(starsContainer);
+            activateStars(starsContainer, ratingValue);
+        });
+    });
+
+    function updateRatingValue(container) {
+        const rating = container.dataset.rating;
+        const ratingValueElement = container.nextElementSibling;
+        ratingValueElement.textContent = `${rating} / 5`;
+    }
+
+    function activateStars(starsContainer, ratingValue) {
+        const stars = starsContainer.querySelectorAll('.star');
+        stars.forEach(star => {
+            const starValue = star.dataset.value;
+            if (starValue <= ratingValue) {
+                star.classList.add('active');
+            } else {
+                star.classList.remove('active');
+            }
         });
     }
-    else {
-        projectCards.forEach(card => {
-            observer.unobserve(card); // Retire la carte de l'observateur
-            card.style.opacity = "1"; // Assure qu'elles sont visibles
-            card.style.transform = ""; // Supprime les transformations
-        });
-    }
-}
-
-// Appel la fonction au chargement de la page
-handleCardsOnMobile();
-
-// Ce code permet de détecter le redimensionnement
-window.addEventListener("resize", handleCardsOnMobile);
-
-// Ce code permet de détecter les changements dynamiques
-isMobile.addEventListener("change", handleCardsOnMobile);
+});
