@@ -11,41 +11,18 @@
     <meta name="robots" content="index, follow">
     
     <meta property="og:title" content="Mon portfolio">
-    <meta property="og:description" content="Bienvenue sur mon portfolio. Je m'appelle Adnam, développeur front-end passionné.">
-    <meta property="og:image" content="https://adnamdemaurisa59.github.io/portfolio-adnam/img/photo.jpg">
+    <meta property="og:description" content="Bienvenue sur mon portfolio. Je m'appelle Adnam, je suis un développeur front-end.">
+    <meta property="og:image" content="../img/Adnam-Photo CV.jpeg">
     <meta property="og:url" content="https://adnamdemaurisa59.github.io/portfolio-adnam/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
     
     <meta name="theme-color" content="#000000">
-    
+
     <title>Mon portfolio</title>
     <link rel="stylesheet" href="../css/profil-adnam.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="../js/profil-adnam.js" defer></script>
-    <style>
-        @keyframes reveal{
-            from {
-                transform: scale(0);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1.0);
-                opacity: 1;
-
-            }
-        }
-
-        h2{
-            font-size: 2rem;
-            text-align: center;
-            animation: reveal linear ;
-            animation-timeline: view();
-            animation-range-start: cover 0%;
-            animation-range-end: contain 50%; 
-        }
-    </style>
-
     
 </head>
 <body>
@@ -53,19 +30,20 @@
     <header>
         <div class="header-title">
             <div>
-                <a href="#" title="">Mon Portfolio</a>
+                <!-- <a href="#" title="Titre">Mon Portfolio</a> -->
+                <h1><a href="#" tabindex="1"  title="Bienvenue sur Mon Portfolio">Mon Portfolio</a></h1>
             </div>
-            <button class="mobile-menu-toggle">
-                <i class="fa-solid fa-bars"></i>                
-            </button> 
+            <button class="mobile-menu-toggle" aria-label="Ouvrir le menu mobile">
+                <i class="fa-solid fa-bars" title="Ouvrir le menu mobile"></i>                
+            </button>
         </div>
-        <nav class="parcourir">
+        <nav class="parcourir" aria-label="Navigation principale">
             <ul>
-                <li><a href="#" title="">Accueil</a></li>
-                <li><a href="#skills" title="">Compétences</a></li>
-                <li><a href="#projects" title="">Projets</a></li>
-                <li><a href="#about" title="">À propos</a></li>
-                <li><a href="#contact" title="">Contact</a></li>
+                <li><a href="#" tabindex="2"  title="Cliquer ici pour revenir en haut de la page">Accueil</a></li>
+                <li><a href="#skills" tabindex="3"  title="Cliquer ici pour voir les compétences">Compétences</a></li>
+                <li><a href="#projects" tabindex="4"  title="Cliquer ici pour voir les projets">Projets</a></li>
+                <li><a href="#about" tabindex="5"  title="Cliquer ici pour en savoir plus sur moi">À propos</a></li>
+                <li><a href="#contact" tabindex="6"  title="Cliquer ici pour me contacter">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -74,45 +52,50 @@
         <!-- 1ère animation -->
         <div class="presentation">
             <div class="welcome">
-                <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank" title="Redirection vers le profil Linkedin">Bienvenue Sur</a>
+                <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank" title="Redirection vers le profil Linkedin de Koud Demaurisa" aria-label="Cliquer ici pour voir mon profil Linkedin">Bienvenue Sur</a>
             </div>
                 <div class="separation"></div>
             <div class="my-portfolio">
-                <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank" title="Redirection vers le profil Linkedin">Mon Portfolio</a>
+                <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank" title="Redirection vers le profil Linkedin de Koud Demaurisa" aria-label="Cliquer ici pour voir mon profil Linkedin">Mon Portfolio</a>
             </div>
         </div>
 
         <!-- 2ème animation -->
         <div class="presentation2">
             <div class="name">
-                <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank" title="Redirection vers le profil Linkedin">Koud Demaurisa Adnam</a>
+                <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank" title="Redirection vers le profil Linkedin de Koud Demaurisa" aria-label="Cliquer ici pour voir mon profil Linkedin">Koud Demaurisa Adnam</a>
             </div>
                 <div class="separation2"></div>
             <div class="metier">
-                <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank" title="Redirection vers le profil Linkedin">Développeur Front-End</a>
+                <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank" title="Redirection vers le profil Linkedin de Koud Demaurisa" aria-label="Cliquer ici pour voir mon profil Linkedin">Développeur Front-End</a>
             </div>
         </div>
     </section>
 
     <section class="">
         <div class="menu-mobile" id="">
-            <nav class="mobile-nav">
+            <nav class="mobile-nav" >
                 <div class="close-nav" id="close-nav">
-                    <i class="fa-solid fa-xmark"></i>
+                    <i class="fa-solid fa-xmark" title="Cliquer ici pour fermer le menu" aria-label="Cliquer ici pour fermer le menu"></i>
                 </div>
-                <a href="#header" title=""><i class="fa-solid fa-house"></i> Accueil</a>
-                <a href="#skills" title=""><i class="fa-solid fa-dumbbell"></i> Compétences</a>
-                <a href="#projects" title=""><i class="fa-solid fa-suitcase"></i> Projets</a>
-                <a href="#about" title=""><i class="fa-regular fa-address-card"></i> À propos de moi</a>
-                <a href="#contact" title=""><i class="fa-regular fa-message"></i> Contact</a>
+                <a href="#header" title="Cliquer ici pour revenir en haut de la page">
+                    <i class="fa-solid fa-house"></i> Accueil</a>
+                <a href="#skills" title="Cliquer ici pour voir les compétences">
+                    <i class="fa-solid fa-dumbbell"></i> Compétences</a>
+                <a href="#projects" title="Cliquer ici pour voir les projets">
+                    <i class="fa-solid fa-suitcase"></i> Projets</a>
+                <a href="#about" title="Cliquer ici pour en savoir plus sur moi">
+                    <i class="fa-regular fa-address-card"></i> À propos de moi</a>
+                <a href="#contact"  title="Cliquer ici pour me contacter">
+                    <i class="fa-regular fa-message"></i> Contact</a>
                 <div class="icon-github">
-                    <a href="https://github.com/AdnamDemaurisa59/portfolio-adnam" target="_blank" title="Redirection vers le github du portfolio">
-                        <i class="fa-brands fa-github"></i> GITHUB 
+                    <a href="https://github.com/AdnamDemaurisa59/portfolio-adnam" target="_blank" title="Redirection vers le github du portfolio" aria-label="Cliquer ici pour voir le github du portfolio">
+                        <i class="fa-brands fa-github" title="Redirection vers le github du portfolio"></i> GITHUB 
                     </a>
                 </div>
                 <div class="icon-linkedin">
-                    <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank" title="Redirection vers le profil Linkedin">
-                        <i class="fa-brands fa-linkedin"></i> Koud Demaurisa Adnam</a>
+                    <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank" title="Redirection vers le profil Linkedin de Koud Demaurisa Adnam" aria-label="Cliquer ici pour voir mon profil Linkedin">
+                        <i class="fa-brands fa-linkedin" title="Redirection vers le profil Linkedin de Koud Demaurisa Adnam"></i> Koud Demaurisa Adnam</a>
                 </div>
             </nav>
         </div>
@@ -123,44 +106,44 @@
             <div class="profil-adnam">
                 <div class="profil-adnam2">
                    <div class="img-adnam">
-                        <img src="../img/Adnam-Photo CV.jpeg" alt="Photo Adnam">
+                        <img src="../img/Adnam-Photo CV.jpeg" tabindex="7"  alt="Photo de profil de Koud Demaurisa Adnam">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="skills" id="skills">
+        <section class="skills" id="skills" tabindex="8" >
             <h2>Compétences</h2>
             <div class="container-skills">
                 <div class="box box1">
-                    <a href="https://developer.mozilla.org/fr/docs/Web/HTML" target="_blank"><img src="../img/logo-HTML.webp" alt="HTML"></a>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/HTML" tabindex="9"  target="_blank"><img src="../img/logo-HTML.webp" alt="Logo HTML, Langage de balisage utilisé pour la création de pages web "></a>
                 </div>
                 <div class="box box2">
-                    <a href="https://developer.mozilla.org/fr/docs/Web/CSS" target="_blank"><img src="../img/Logo1-css.jpeg" alt="CSS"></a>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/CSS" tabindex="10"  target="_blank"><img src="../img/Logo1-css.jpeg" alt="Logo CSS, un langage de programmation permettant de styliser une page web"></a>
                 </div>
                 <div class="box box3">
-                    <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank"><img src="../img/logo-js.jpeg" alt="JAVASCRIPT"></a>
+                    <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" tabindex="11"  target="_blank"><img src="../img/logo-js.jpeg" alt="Logo Javascript, il s'agit d'un language de programmation côté front-end"></a>
                 </div>
                 <div class="box box4">
-                    <a href="https://gsap.com/docs/v3/" target="_blank"><img src="../img/logo-gsap.jpeg" alt="GSAP"></a>
+                    <a href="https://gsap.com/docs/v3/" tabindex="12"  target="_blank"><img src="../img/logo-gsap.jpeg" alt="Logo GSAP, un framework de Javascript permettant d'effectuer des animations"></a>
                 </div>
                 <div class="box box5">
-                    <a href="https://developer.mozilla.org/fr/docs/Glossary/Python" target="_blank"><img src="../img/python.jpeg" alt="Python"></a>
+                    <a href="https://developer.mozilla.org/fr/docs/Glossary/Python" tabindex="13"  target="_blank"><img src="../img/python.jpeg" alt="Logo Python, il s'agit d'un language de programmation côté back-end"></a>
                 </div>
             </div>
         </section>
 
-        <section class="Languages">
+        <section class="Languages" tabindex="14" >
             <h2>Langues Parler</h2>
             <div class="langue-speak">
                 <div class="boxA">
-                    <a href="https://fr.wikipedia.org/wiki/Français" target="_blank"><img src="../img/langue-francaise.jpeg" alt="Langue Française"></a>
+                    <a href="https://fr.wikipedia.org/wiki/Français" tabindex="15"  target="_blank"><img src="../img/langue-francaise.jpeg" alt="Langue Française"></a>
                 </div>
                 <div class="boxB">
-                    <a href="https://fr.wikipedia.org/wiki/Anglais" target="_blank"><img src="../img/badge_anglais.gif" alt="Langue Anglaise"></a>
+                    <a href="https://fr.wikipedia.org/wiki/Anglais" tabindex="16"  target="_blank"><img src="../img/badge_anglais.gif" alt="Langue Anglaise"></a>
                 </div>
                 <div class="boxC">
-                    <a href="https://fr.wikipedia.org/wiki/Espagnol#:~:text=L'espagnol%20(en%20espagnol%20%3A,histoire%20à%20l'Empire%20espagnol." target="_blank" title=""><img src="../img/logo-espagne.jpeg" alt="Langue Espagnol"></a>
+                    <a href="https://fr.wikipedia.org/wiki/Espagnol#:~:text=L'espagnol%20(en%20espagnol%20%3A,histoire%20à%20l'Empire%20espagnol." tabindex="18"  target="_blank" title=""><img src="../img/logo-espagne.jpeg" alt="Langue Espagnol"></a>
                 </div>
             </div>
         </section>
@@ -174,36 +157,36 @@
                     <img src="../images-projetencours/logo-AgriPartenires.jpeg" alt="Site Agri-Partenaires">
                     <h3>Agri-partenaires </h3>
                     <p>Agri-Partenaires propose des services dans le domaine de l'agriculture</p>
-                    <a href="https://adnamdemaurisa59.github.io/Agri-Partenaires1/" class="btn" target="_blank" title="">Voir le site</a>
-                    <a href="https://github.com/AdnamDemaurisa59/Agri-Partenaires1" class="btn" target="_blank" title="">Code source</a>
+                    <a href="https://adnamdemaurisa59.github.io/Agri-Partenaires1/" tabindex="19"  class="btn" target="_blank" title="">Voir le site</a>
+                    <a href="https://github.com/AdnamDemaurisa59/Agri-Partenaires1" tabindex="20"  class="btn" target="_blank" title="">Code source</a>
                 </div>
                 <div class="project-card">
                     <img src="../images-projetencours/juste-prix/justePrix.gif" alt="Project Juste-Prix">
                     <h3>Juste Prix</h3>
                     <p>Plateforme permettant de jouer à un jeu qui consiste à deviner un nombre</p>
-                    <a href="https://adnamdemaurisa59.github.io/Juste-Prix-JS/" class="btn" target="_blank">Voir le site</a>
-                    <a href="https://github.com/AdnamDemaurisa59/Juste-Prix-JS" class="btn" target="_blank">Code source</a>
+                    <a href="https://adnamdemaurisa59.github.io/Juste-Prix-JS/" tabindex="21" class="btn" target="_blank">Voir le site</a>
+                    <a href="https://github.com/AdnamDemaurisa59/Juste-Prix-JS" tabindex="22" class="btn" target="_blank">Code source</a>
                 </div>
                 <div class="project-card">
                     <img src="../images-projetencours/immobilier/todo-hoverNav.gif" alt="Projet Immobilier">
                     <h3>Immobilier</h3>
                     <p>Plateforme proposant différents types d'hébergement à prix libre</p>
-                    <a href="https://adnamdemaurisa59.github.io/projet-immobilier/" class="btn" target="_blank">Voir le site</a>
-                    <a href="https://github.com/AdnamDemaurisa59/projet-immobilier" class="btn" target="_blank">Code source</a>
+                    <a href="https://adnamdemaurisa59.github.io/projet-immobilier/" tabindex="23" class="btn" target="_blank">Voir le site</a>
+                    <a href="https://github.com/AdnamDemaurisa59/projet-immobilier" tabindex="24" class="btn" target="_blank">Code source</a>
                 </div>
                 <div class="project-card">
                     <img src="../images-projetencours/tea-station/product-1.jpeg" alt="Projet Tea-Station">
                     <h3>Tea Station</h3>
                     <p>Plateforme proposant différents types de Thé</p>
-                    <a href="https://malika1526.github.io/Projet-Tea-Station/" class="btn" target="_blank">Voir le site</a>
-                    <a href="https://github.com/Malika1526/Projet-Tea-Station" class="btn" target="_blank">Code source</a>
+                    <a href="https://malika1526.github.io/Projet-Tea-Station/" tabindex="25" class="btn" target="_blank">Voir le site</a>
+                    <a href="https://github.com/Malika1526/Projet-Tea-Station" tabindex="26" class="btn" target="_blank">Code source</a>
                 </div>
                 <div class="project-card">
                     <img src="../img/plateforme-dessin.png" alt="Projet Dessin">
                     <h3>Plateform Dessin</h3>
                     <p>Plateforme proposant la possibilité de créer des dessins et de les télécharger</p>
-                    <a href="https://adnamdemaurisa59.github.io/Application-Dessin/" class="btn" target="_blank">Voir le site</a>
-                    <a href="https://github.com/AdnamDemaurisa59/Application-Dessin" class="btn" target="_blank">Code source</a>
+                    <a href="https://adnamdemaurisa59.github.io/Application-Dessin/" tabindex="27" class="btn" target="_blank">Voir le site</a>
+                    <a href="https://github.com/AdnamDemaurisa59/Application-Dessin" tabindex="28" class="btn" target="_blank">Code source</a>
                 </div>
             </div>
         </div>
@@ -213,7 +196,7 @@
     <section id="about">
         <h2>À propos de moi</h2>
         <div class="about-container">
-            <img src="../img/Adnam-Photo CV.jpeg" alt="Profile Picture">
+            <img src="../img/Adnam-Photo CV.jpeg" tabindex="29" alt="Photo CV Koud Demaurisa Adnam">
             <div class="about-text">
                 <p>Je suis un développeur web passionné par le web, j'aime créer des pages webs dynamique, interactif et avec des animations.</p>
                 <p>Je me suis spécialisé en tant que développeur front-end, mais je connais les bases dans le développement backend(API, Base de données, etc..)</p>
@@ -224,23 +207,31 @@
     <section id="contact">
         <h2>Contactez-moi</h2>
         <form action="mailto:adnam.kouddemaurisa@outlook.fr" method="post" id="contactForm" class="contactform">
-            <input type="text" id="nom" name="name" placeholder="Votre nom" required minlength="2" maxlength="50">
-            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required minlength="2" maxlength="50">
-            <input type="tel" id="num" name="tel" placeholder="Votre numéro de téléphone" required pattern="[0-9]{10}" title="Entrez un numéro de téléphone à 10 chiffres">
-            <input type="email" id="email" name="email" placeholder="Votre email" required>
-            <textarea name="message" id="message" placeholder="Votre message" required minlength="10" maxlength="500"></textarea>
-            <button type="submit" id="btnEnvoyerMail"  class="btn">Envoyer</button>
+            <label for="nom">Votre nom</label>
+            <input type="text" tabindex="30" id="nom" name="name" placeholder="Entrez votre nom" required minlength="2" maxlength="50">
+            <label for="">Votre prénom</label>
+            <input type="text" tabindex="31"  id="prenom" name="prenom" placeholder="Entrez votre prénom" required minlength="2" maxlength="50">
+            <label for="numero">Votre numéro de téléphone</label>
+            <input type="tel" tabindex="32" id="numero" name="tel" placeholder="Entrez votre numéro de téléphone" required pattern="[0-9]{10}" title="Entrez un numéro de téléphone à 10 chiffres">
+            <label for="email">Votre adresse e-mail</label>
+            <input type="email" id="email" name="email" tabindex="33" placeholder="Entrez votre email" required>
+            <label for="message">Quel est votre demande ?</label>
+            <textarea name="message" id="message" tabindex="34" placeholder="Entrez votre message" required minlength="10" maxlength="500"></textarea>
+            <button type="submit" tabindex="35" id="btnEnvoyerMail" aria-label="Cliquer sur le bouton pour envoyer un email"  class="btn">Envoyer</button>
         </form>
         <div class="icon-group">
             <div class="linkedin">
-                <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank"><i class="fa-brands fa-linkedin"></i></a> 
+                <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank" title="Redirection vers le profil Linkedin de Koud Demaurisa Adnam" tabindex="36">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a> 
               </div>
             
             <div class="github">
-                <a href="https://github.com/AdnamDemaurisa59/portfolio-adnam" target="_blank" class="github"><i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/AdnamDemaurisa59/portfolio-adnam" target="_blank" class="github" title="Redirection vers le github de ce portfolio" tabindex="37">
+                    <i class="fa-brands fa-github"></i>
+                </a>
             </div>
         </div>
-            <!-- Ajoutez d'autres liens de réseaux sociaux ici -->
     </section>
 
 
@@ -249,18 +240,18 @@
         <div class="comment-form">
             <h3>Laissez un commentaire et votre avis sur mon portfolio</h3>
             <form id="commentForm" method="post">
-                <textarea name="comments" placeholder="Votre commentaire" required></textarea>
+                <textarea name="comments" placeholder="Votre commentaire" tabindex="38" required></textarea>
                 <div class="rating">
                     <div class="stars" data-rating="0">
-                        <span class="star" data-value="1">&starf;</span>
-                        <span class="star" data-value="2">&starf;</span>
-                        <span class="star" data-value="3">&starf;</span>
-                        <span class="star" data-value="4">&starf;</span>
-                        <span class="star" data-value="5">&starf;</span>
+                        <span class="star" tabindex="39" data-value="1">&starf;</span>
+                        <span class="star" tabindex="40" data-value="2">&starf;</span>
+                        <span class="star" tabindex="41" data-value="3">&starf;</span>
+                        <span class="star" tabindex="42" data-value="4">&starf;</span>
+                        <span class="star" tabindex="43" data-value="5">&starf;</span>
                     </div>
-                    <div class="rating-value">0 / 5</div>
+                    <div class="rating-value" tabindex="44">0 / 5</div>
                 </div>
-                <button id="btnEnvoyerMail" type="submit" class="btn">Envoyer</button>
+                <button id="btnEnvoyerMail" type="submit" class="btn" aria-label="Cliquer sur le bouton pour envoyer votre commentaire et votre notation de mon portfolio" tabindex="45">Envoyer</button>
             </form>
         </div>     
 
@@ -269,13 +260,13 @@
 
     <footer>
         <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
-        <div class="footer-nav">
-            <a href="#home">Accueil</a>
-            <a href="#skills">Compétences</a>
-            <a href="#projects">Projets</a>
-            <a href="#about">À propos</a>
-            <a href="#contact">Contact</a>
-        </div>
+        <!-- <div class="footer-nav">
+            <a href="#" tabindex="46" title="">Accueil</a>
+            <a href="#skills" tabindex="47" title="">Compétences</a>
+            <a href="#projects" tabindex="48" title="">Projets</a>
+            <a href="#about" tabindex="49" title="">À propos</a>
+            <a href="#contact" tabindex="50" title="">Contact</a>
+        </div> -->
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>

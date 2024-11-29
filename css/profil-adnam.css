@@ -14,6 +14,28 @@ body {
     overflow-x: hidden;
 }
 
+/* Animation balise h2 au scroll */
+
+@keyframes reveal{
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1.0);
+        opacity: 1;
+
+    }
+}
+
+h2{
+    font-size: 2rem;
+    text-align: center;
+    animation: reveal linear ;
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: contain 50%; 
+}
 
 /* Section HTML - Header */
 header {
@@ -28,6 +50,10 @@ header {
     top: 0px;
     z-index: 1;
 
+}
+
+header h1 {
+    font-size: 15px;
 }
 
 .header-title a {
