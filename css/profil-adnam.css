@@ -16,8 +16,11 @@ body {
     overflow-x: hidden;
 }
 
-/* Animation balise h2 au scroll */
+label {
+    cursor: pointer;
+}
 
+/* Animation balise h2 au scroll */
 @keyframes reveal{
     from {
         transform: scale(0);
@@ -313,22 +316,19 @@ nav ul li a:hover {
 
 .skills {
     padding: 50px 20px;
-    background: #f7f7f7;
+    background-color: #ededed;
     text-align: center;
     width: 100%;
 }
 
-.container-skills {
+/* .container-skills {
     display: flex;
     justify-content: center;
     flex-direction: row; 
     gap:80px;
-    height: 200px;
-}
-
-.container-skills img {
-    border-radius: 50%;
-}
+    height: 300px;
+    flex-wrap: wrap;
+} */
 
 .box1 img{
     height: 150px;
@@ -345,6 +345,8 @@ nav ul li a:hover {
 .box4 img{
     height: 150px;
     width: 150px;
+    border-radius: 50%;
+
 }
 
 .box5 img{
@@ -418,7 +420,7 @@ nav ul li a:hover {
 /* Section HTML - À propos de moi */
 #about {
     padding: 50px 20px;
-    background: #f7f7f7;
+    background-color: #ededed;
     text-align: center;
     width: 100%;
 
@@ -461,14 +463,14 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-.contactform {
+.contact-form {
     max-width: 600px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
 
-.contactform input, .contactform textarea {
+.contact-form input, .contact-form textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -476,7 +478,7 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-.contactform button {
+.contact-form button {
     padding: 10px 20px;
     background: #f39c12;
     color: #fff;
@@ -486,7 +488,7 @@ nav ul li a:hover {
     transition: background 0.3s;
 }
 
-.contactform button:hover {
+.contact-form button:hover {
     background: #d35400;
 }
 
@@ -541,10 +543,8 @@ form textarea {
 /* Section HTML - Commentaires et Notations */
 #comments {
     padding: 40px 20px;
-    background-color: #f9f9f9;
-    margin-bottom: 50px;
+    background-color: #ededed;
     width: 100%;
-
 }
 
 .comment-form {
@@ -664,18 +664,18 @@ footer .footer-nav a:hover {
 
     .skills {
         padding: 20px;
-        background: #f7f7f7;
-        height: 1020px;
+        background-color: #ededed;
+        height: 1100px;
         width: 100%;
     }
 
     .container-skills {
         display: flex;
         justify-content: center;
-        align-items: center;
+        /* align-items: center; */
         flex-direction: column;
-        gap: 50px;
-        padding-top: 370px;
+        gap: 40px;
+        padding-top: 50px;
     }
 
     .langue-speak {
@@ -837,17 +837,17 @@ footer .footer-nav a:hover {
         cursor: pointer;
     }
 
-    .contactform input, .contactform textarea {
+    .contact-form input, .contact-form textarea {
         width: 90%;
     }
 
-    .contactform button {
+    .contact-form button {
         padding: 10px 20px;
         width: 90%;
     }
 
     .comment-form {
-        width: 90%;
+        width: 80%;
         max-width: 500px;
     }
 
@@ -895,7 +895,7 @@ footer .footer-nav a:hover {
 
     .skills {
         padding: 20px;
-        background: #f7f7f7;
+        background-color: #ededed;
         text-align: center;
         width: 100%;
         height: 470px;
@@ -906,8 +906,8 @@ footer .footer-nav a:hover {
         justify-content: center;
         flex-direction: row; 
         flex-wrap: wrap;
-        gap:80px;
-        height: 200px;
+        gap:30px;
+        height: 260px;
     }
 
     .projects-container {
@@ -1008,6 +1008,19 @@ footer .footer-nav a:hover {
         to {
             transform: translateX(-100%); /* ajuste le pourcentage en fonction de la longueur de la duplicata */
         }
+    }
+
+    .container-skills {
+        display: flex;
+        justify-content: center;
+        flex-direction: row; 
+        gap:30px;
+        height: 250px;
+        flex-wrap: wrap;
+    }
+
+    .box {
+        margin-top: 20px;
     }
 
 }

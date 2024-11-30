@@ -31,14 +31,15 @@ function afficherEmail(nom, prenom, num, email, message) {
 //Code pour valider le formulaire de contact
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('.contact-form');
-    const nameInput = form.querySelector('input[name="name"]');
-    const prenomInput = form.querySelector('input[name="prenom"]');
-    const telInput = form.querySelector('input[name="tel"]');
-    const emailInput = form.querySelector('input[name="email"]');
-    const messageTextarea = form.querySelector('textarea[name="message"]');
+    const nameInput = document.querySelector('input[name="name"]');
+    const prenomInput = document.querySelector('input[name="prenom"]');
+    const telInput = document.querySelector('input[name="tel"]');
+    const emailInput = document.querySelector('input[name="email"]');
+    const messageTextarea = document.querySelector('textarea[name="message"]');
     const emailPattern = /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    const submitButton = document.querySelector('.contact-form button[type="submit"]');
     
-    form.addEventListener('submit', (e) => {
+    submitButton.addEventListener('submit', (e) => {
         let isValid = true;
         
         if (nameInput.value.trim() === '') {
