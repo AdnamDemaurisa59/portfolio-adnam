@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <script src="../js/animation.js" defer></script>
     <script src="../js/profil-adnam.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     
     <!-- <script src="../js/animation.js" defer></script>
 
@@ -34,10 +36,9 @@
 </head>
 <body>
 
-    <header>
+    <!-- <header>
         <div class="header-title">
             <div>
-                <!-- <a href="#" title="Titre">Mon Portfolio</a> -->
                 <h1><a href="#" tabindex="1"  title="Bienvenue sur Mon Portfolio">Mon Portfolio</a></h1>
             </div>
             <button class="mobile-menu-toggle" aria-label="Ouvrir le menu mobile">
@@ -53,32 +54,14 @@
                 <li><a href="#contact" tabindex="6"  title="Cliquer ici pour me contacter">Contact</a></li>
             </ul>
         </nav>
-    </header>
+    </header> -->
 
-    <section class="animation-presentation" id="header">
-        <!-- 1ère animation -->
-        <div class="presentation">
-            <div class="welcome">
-                <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank" title="Redirection vers le profil Linkedin de Koud Demaurisa" aria-label="Cliquer ici pour voir mon profil Linkedin">Bienvenue Sur</a>
-            </div>
-                <div class="separation"></div>
-            <div class="my-portfolio">
-                <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank" title="Redirection vers le profil Linkedin de Koud Demaurisa" aria-label="Cliquer ici pour voir mon profil Linkedin">Mon Portfolio</a>
-            </div>
-        </div>
-
-        <!-- 2ème animation -->
-        <div class="presentation2">
-            <div class="name">
-                <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank" title="Redirection vers le profil Linkedin de Koud Demaurisa" aria-label="Cliquer ici pour voir mon profil Linkedin">Koud Demaurisa Adnam</a>
-            </div>
-                <div class="separation2"></div>
-            <div class="metier">
-                <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank" title="Redirection vers le profil Linkedin de Koud Demaurisa" aria-label="Cliquer ici pour voir mon profil Linkedin">Développeur Front-End</a>
-            </div>
-        </div>
-    </section>
-
+    <div class="open-menu">
+        <button class="mobile-menu-toggle" aria-label="Ouvrir le menu mobile">
+            <i class="fa-solid fa-bars" title="Ouvrir le menu mobile"></i>                
+        </button> 
+    </div>
+        
     <section class="">
         <div class="menu-mobile" id="">
             <nav class="mobile-nav" >
@@ -108,139 +91,260 @@
         </div>
     </section>
 
-    <main>
-        <section class="profil-user">
-            <div class="profil-adnam">
-                <div class="profil-adnam2">
-                   <div class="img-adnam">
-                        <img src="../img/Adnam-Photo CV.jpeg" tabindex="7"  alt="Photo de profil de Koud Demaurisa Adnam" title="Photo de profil de Koud Demaurisa Adnam">
+
+    <!-- MAJ PORTFOLIO -->
+
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">AKD</a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">À propos</a>
+                <a href="#skills" class="nav-link">Compétences</a>
+                <a href="#projects" class="nav-link">Projets</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="main-title">
+                <span class="name">ADNAM KOUD DE MAURISA</span>
+                <span class="title">Développeur Front-end Créatif</span>
+                <p class="title-description">
+                    Spécialisé dans la création d'expériences web innovantes et interactives,
+                    je donne vie à vos projets avec passion et expertise.
+                </p>
+            </h1>
+            <div class="scroll-indicator">
+                <span>Découvrir</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="presentation" id="presentation">
+        <div class="container">
+            <div class="presentation-grid">
+                <div class="presentation-image">
+                    <img src="../img/Adnam-Photo.png" alt="Adnam Koud">
+                </div>
+                <div class="presentation-content card">
+                    <h3>Développeur Front-end Passionné</h3>
+                    <p>Spécialisé dans la création d'expériences web innovantes et performantes. Mon approche combine créativité et expertise technique pour donner vie à des interfaces utilisateur exceptionnelles.</p>
+                    <div class="presentation-stats">
+                        <div class="stat">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Années d'expérience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projets réalisés</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="skills" id="skills" tabindex="8" >
+    <section class="about" id="about">
+        <div class="container">
+            <h2>À Propos</h2>
+            <div class="about-content">
+                <div class="about-card card">
+                    <div class="about-text">
+                        <p>Je suis passionné par le développement web et j’adore concevoir des interfaces modernes et interactives. Au fil de mon parcours, j’ai pu développer une solide expertise en front-end, en mettant toujours l’accent sur l’expérience utilisateur et des animations qui rendent les interactions fluides.</p>
+                        <p>Mon objectif est de créer des sites web rapides, accessibles à tous, et agréables à parcourir, tout en tirant parti des technologies web les plus récentes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="container">
             <h2>Compétences</h2>
-            <div class="container-skills">
-                <div class="box box1">
-                    <a href="https://developer.mozilla.org/fr/docs/Web/HTML" tabindex="9"  target="_blank"><img src="../logo-langage-programmation/html5-logo.svg.png" title="Logo Html 5 - source image : https://fr.m.wikipedia.org/wiki/Fichier:HTML5_logo_and_wordmark.svg" alt="Logo HTML 5, Langage de balisage utilisé pour la création de pages web "></a>
+            <div class="skills-slider">
+                <div class="skills-track">
+                    <!-- Premier groupe -->
+                    <div class="skill-card card">
+                        <a href="https://developer.mozilla.org/fr/docs/Glossary/HTML5" target="_blank"><i class="fab fa-html5"></i></a>
+                        <a href="https://developer.mozilla.org/fr/docs/Glossary/HTML5" target="_blank"><h3>HTML5</h3></a>
+                        <p>Structure sémantique et accessible</p>
+                    </div>
+                    <div class="skill-card card">
+                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS" target="_blank"><i class="fab fa-css3-alt"></i></a>        
+                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS" target="_blank"><h3>CSS3</h3></a>        
+                       <p>Styles modernes et animations</p>
+                    </div>
+                    <div class="skill-card card">
+                        <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank"><i class="fab fa-js"></i></a>
+                        <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank"><h3>JavaScript</h3></a>
+                        <p>Interactivité et animations dynamiques</p>
+                    </div>
+                    <div class="skill-card card">
+                        <a href="https://fr.vuejs.org/guide/introduction" target="_blank"><i class="fa-brands fa-vuejs"></i></a>
+                         <a href="https://fr.vuejs.org/guide/introduction" target="_blank"><h3>Vue.JS</h3></a>
+                        <p>Développement d'applications modernes</p>
+                    </div>
+                    <!-- Deuxième groupe (doublons pour l'effet infini) -->
+                    <div class="skill-card card">
+                        <a href="https://developer.mozilla.org/fr/docs/Glossary/HTML5" target="_blank"><i class="fab fa-html5"></i></a>
+                        <a href="https://developer.mozilla.org/fr/docs/Glossary/HTML5" target="_blank"><h3>HTML5</h3>
+                        </a>
+                        <p>Structure sémantique et accessible</p>
+                    </div>
+                    <div class="skill-card card">
+                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS" target="_blank"><i class="fab fa-css3-alt"></i></a>        
+                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS" target="_blank"><h3>CSS3</h3></a>                        
+                        <p>Styles modernes et animations</p>
+                    </div>
+                    <div class="skill-card card">
+                        <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank"><i class="fab fa-js"></i></a>
+                        <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank"><h3>JavaScript</h3></a>
+                        <p>Interactivité et animations dynamiques</p>
+                    </div>
+                    <div class="skill-card card">
+                        <a href="https://fr.vuejs.org/guide/introduction" target="_blank"><i class="fa-brands fa-vuejs"></i></a>
+                        <a href="https://fr.vuejs.org/guide/introduction" target="_blank"><h3>Vue.JS</h3></a>
+                        <p>Développement d'applications modernes</p>
+                    </div>
                 </div>
-                <div class="box box2">
-                    <a href="https://developer.mozilla.org/fr/docs/Web/CSS" tabindex="10"  target="_blank"><img src="../logo-langage-programmation/css-logo.png" title="Logo CSS - source image : https://www.superbefilms.com/css-logo/" alt="Logo CSS, Langage de programmation permettant de styliser une page web"></a>
-                </div>
-                <div class="box box3">
-                    <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" tabindex="11"  target="_blank"><img src="../logo-langage-programmation/javascript-logo.png" title="Logo Javascript - source image : https://1000logos.net/javascript-logo/" alt="Logo Javascript, il s'agit d'un langage de programmation côté front-end"></a>
-                </div>
-                <div class="box box4">
-                    <a href="https://gsap.com/docs/v3/" tabindex="12"  target="_blank"><img src="../logo-langage-programmation/logo-gsap.png" title="Logo GSAP - source image : https://1stwebdesigner.com/a-guide-to-understanding-gsap-javascript-animation/" alt="Logo GSAP, un framework de Javascript permettant d'effectuer des animations"></a>
-                </div>
-                <div class="box box5">
-                    <a href="https://developer.mozilla.org/fr/docs/Glossary/Python" tabindex="13"  target="_blank"><img src="../logo-langage-programmation/logo-python.webp" title="Logo Python - source image : https://icon-icons.com/icon/python-vertical-logo/168039" alt="Logo Python, il s'agit d'un langage de programmation côté back-end"></a>
-                </div>
-            </div>
-        </section>
-
-        <section class="Languages" tabindex="14" >
-            <h2>Langues Parler</h2>
-            <div class="langue-speak">
-                <div class="boxA">
-                    <a href="https://fr.wikipedia.org/wiki/Français" tabindex="15"  target="_blank"><img src="../img/langue-francaise.jpeg" alt="Photo du drapeau Français" title="Langue Française"></a>
-                </div>
-                <div class="boxB">
-                    <a href="https://fr.wikipedia.org/wiki/Anglais" tabindex="16"  target="_blank"><img src="../img/badge_anglais.gif" alt="Photo du drapeau du Royaume-Uni" title="Langue Anglaise"></a>
-                </div>
-                <div class="boxC">
-                    <a href="https://fr.wikipedia.org/wiki/Espagnol#:~:text=L'espagnol%20(en%20espagnol%20%3A,histoire%20à%20l'Empire%20espagnol." tabindex="18"  target="_blank" title=""><img src="../img/logo-espagne.jpeg"alt="Photo du drapeau de l'Espagne" title="Langue Espagnol"></a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <section id="projects">
-        <h2>Projets</h2>
-        <div class="projects-container">
-            <div class="carousel-inner">
-                <div class="project-card">
-                    <img src="../images-projetencours/logo-AgriPartenires.jpeg" alt="Logo représentant l'entreprise Agri-Partenaires" title="Logo entreprise Agri-Partenaires">
-                    <h3 title="Titre du nom de l'entreprise : Agri-Partenaires">Agri-partenaires</h3>
-                    <p title="Texte indiquant une description du site Agri-Partenaires">Agri-Partenaires propose des services dans le domaine de l'agriculture</p>
-                    <a href="https://adnamdemaurisa59.github.io/Agri-Partenaires1/" tabindex="19"  class="btn" target="_blank" title="Cliquer ici pour voir le projet" title="Cliquer ici pour voir le projet Agri-Partenaires">Voir le site</a>
-                    <a href="https://github.com/AdnamDemaurisa59/Agri-Partenaires1" tabindex="20"  class="btn" target="_blank"  title="Cliquer ici pour voir le code source du projet Agri-Partenaires">Code source</a>
-                </div>
-                <div class="project-card">
-                    <img src="../images-projetencours/juste-prix/justePrix.gif" alt="Image représentant le Projet Juste-Prix" title="Image Projet Juste-Prix">
-                    <h3 title="Titre du projet Juste-Prix">Juste Prix</h3>
-                    <p title="Texte indiquant une description du projet Juste-Prix">Plateforme permettant de jouer à un jeu qui consiste à deviner un nombre</p>
-                    <a href="https://adnamdemaurisa59.github.io/Juste-Prix-JS/" tabindex="21" class="btn" target="_blank" title="Cliquer ici pour voir le projet Juste-Prix">Voir le site</a>
-                    <a href="https://github.com/AdnamDemaurisa59/Juste-Prix-JS" tabindex="22" class="btn" target="_blank"  title="Cliquer ici pour voir le code source du projet Juste-Prix">Code source</a>
-                </div>
-                <div class="project-card">
-                    <img src="../images-projetencours/immobilier/todo-hoverNav.gif" alt="Image représentant le Projet Immobilier" title="Image Projet Immobilier">
-                    <h3 title="Titre du projet Immobilier">Immobilier</h3>
-                    <p title="Texte indiquant une description du projet Immobilier">Plateforme proposant différents types d'hébergement à prix libre</p>
-                    <a href="https://adnamdemaurisa59.github.io/projet-immobilier/" tabindex="23" class="btn" target="_blank"  title="Cliquer ici pour voir le projet Immobilier">Voir le site</a>
-                    <a href="https://github.com/AdnamDemaurisa59/projet-immobilier" tabindex="24" class="btn" target="_blank"  title="Cliquer ici pour voir le code source du projet Immobilier">Code source</a>
-                </div>
-                <div class="project-card">
-                    <img src="../images-projetencours/tea-station/product-1.jpeg" alt="Image représentant le Projet Tea-Station" title="Image Projet Tea-Station">
-                    <h3 title="Titre du projet Tea-Station">Tea Station</h3>
-                    <p title="Texte indiquant une description du projet Tea-Station">Plateforme proposant différents types de Thé</p>
-                    <a href="https://malika1526.github.io/Projet-Tea-Station/" tabindex="25" class="btn" target="_blank" title="Cliquer ici pour voir le projet Tea-Station">Voir le site</a>
-                    <a href="https://github.com/Malika1526/Projet-Tea-Station" tabindex="26" class="btn" target="_blank"  title="Cliquer ici pour voir le code source du projet Tea-Station">Code source</a>
-                </div>
-                <div class="project-card">
-                    <img src="../img/plateforme-dessin.png" alt="Image représentant le Projet Plateforme-Dessin" title="Image Projet Plateforme-Dessin">
-                    <h3 title="Titre du projet Plateforme-Dessin">Plateform Dessin</h3>
-                    <p title="Texte indiquant une description du projet Plateforme-Dessin">Plateforme proposant la possibilité de créer des dessins et de les télécharger</p>
-                    <a href="https://adnamdemaurisa59.github.io/Application-Dessin/" tabindex="27" class="btn" target="_blank" title="Cliquer ici pour voir le projet Plateform-Dessin">Voir le site</a>
-                    <a href="https://github.com/AdnamDemaurisa59/Application-Dessin" tabindex="28" class="btn" target="_blank" title="Cliquer ici pour voir le code source du projet Plateform-Dessin">Code source</a>
-                </div>
-            </div>
-        </div>
-        
-    </section>
-
-    <section id="about">
-        <h2>À propos de moi</h2>
-        <div class="about-container">
-            <img src="../img/Adnam-Photo CV.jpeg" tabindex="29" alt="Photo de profil de Koud Demaurisa Adnam" title="Photo de profil de Koud Demaurisa Adnam">
-            <div class="about-text">
-                <p title="Texte qui explique le profil professionnel de Koud Demaurisa Adnam">Je suis un développeur web passionné par le web, j'aime créer des pages webs dynamique, interactif et avec des animations.</p>
-                <p title="Texte qui explique le profil professionnel de Koud Demaurisa Adnam">Je me suis spécialisé en tant que développeur front-end, mais je connais les bases dans le développement backend(API, Base de données, etc..)</p>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contactez-moi</h2>
-        <form action="mailto:adnam.kouddemaurisa@outlook.fr" method="post" id="contactForm" class="contact-form" autocomplete="on">
-            <label for="name">Votre nom</label>
-            <input type="text" tabindex="30" id="name" name="name" placeholder="Entrez votre nom" required minlength="2" maxlength="50">
-            <label for="prenom">Votre prénom</label>
-            <input type="text" tabindex="31"  id="prenom" name="prenom" placeholder="Entrez votre prénom" required minlength="2" maxlength="50">
-            <label for="tel">Votre numéro de téléphone</label>
-            <input type="tel" tabindex="32" id="tel" name="tel" placeholder="Entrez votre numéro de téléphone" required pattern="[0-9]{10}" title="Entrez un numéro de téléphone à 10 chiffres">
-            <label for="email">Votre adresse e-mail</label>
-            <input type="email" id="email" name="email" tabindex="33" placeholder="Entrez votre email" required>
-            <label for="message">Quel est votre message ?</label>
-            <textarea name="message" id="message" tabindex="34" placeholder="Entrez votre message" required minlength="10" maxlength="500"></textarea>
-            <button type="submit" tabindex="35" id="btnEnvoyerMail" aria-label="Cliquer sur le bouton pour envoyer un email"  class="btn">Envoyer</button>
-        </form>
-        <div class="icon-group">
-            <div class="linkedin">
-                <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank" title="Redirection vers le profil Linkedin de Koud Demaurisa Adnam" tabindex="36">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a> 
-              </div>
-            
-            <div class="github">
-                <a href="https://github.com/AdnamDemaurisa59/portfolio-adnam" target="_blank" class="github" title="Redirection vers le github de ce portfolio" tabindex="37">
-                    <i class="fa-brands fa-github"></i>
-                </a>
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2>Parcours</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content card">
+                        <h3>Formation Développeur Web à 26ACADEMY</h3>
+                        <p class="timeline-date">Avril 2022 - Juillet 2022</p>
+                        <p>Formation intensive en développement web à distance, spécialisation front-end avec : HTML - CSS - JAVASCRIPT</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content card">
+                        <h3>Bachelor, Programmation informatique, applications spécifiques à  Lille Ynov Campus                        </h3>
+                        <p class="timeline-date">Septembre 2023 - Juin 2024</p>
+                        <p>Réalisation de sites web, focus sur l'expérience utilisateur. 
+                            <br>Différents projets réalisés :<br>-Site e-commerce : (HTML, CSS, JavaScript) et back-end (Node.js).
+                            <br>-Forum web complet : HTML, CSS, JavaScript, un serveur en Go, et une base de données SQLite.
+                            <br>-Carnet d’adresses : Application web permettant de stocker les coordonnées via LocalStorage (HTML, CSS, JavaScript).</p>
+                            <a href="https://www.ynov.com/campus/lille" target="_blank" title="Cliquer ici pour voir le site de l'école">Voir l'Ecole</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content card">
+                        <h3>Formation Développeur Web & Web Mobile à l'AFCI </h3>
+                        <p class="timeline-date">Septembre 2024 - Mai 2025</p>
+                        <p>Formation en développement web & web mobile, avec pour but de savoir créer un site internet ou une application mobile.</p>
+                        <p>Langages Web appris : HTML5, CSS3, JAVASCRIPT, VUE.JS, PHP, SQL, DOCKER, </p>
+                        <a href="https://www.ynov.com/campus/lille" target="_blank" title="Cliquer ici pour voir le site de l'organisme">Voir l'organisme de formation</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2>Projets</h2>
+            <section id="projects">
+                <div class="projects-container">
+                    <div class="carousel-inner">
+                        <div class="project-card">
+                            <img src="../images-projetencours/logo-AgriPartenires.jpeg" alt="Logo représentant l'entreprise Agri-Partenaires" title="Logo entreprise Agri-Partenaires">
+                            <h3 title="Titre du nom de l'entreprise : Agri-Partenaires">Agri-partenaires</h3>
+                            <p title="Texte indiquant une description du site Agri-Partenaires">Agri-Partenaires propose des services dans le domaine de l'agriculture</p>
+                            <a href="https://adnamdemaurisa59.github.io/Agri-Partenaires1/" tabindex="19"  class="btn" target="_blank" title="Cliquer ici pour voir le projet" title="Cliquer ici pour voir le projet Agri-Partenaires">Voir le site</a>
+                            <a href="https://github.com/AdnamDemaurisa59/Agri-Partenaires1" tabindex="20"  class="btn" target="_blank"  title="Cliquer ici pour voir le code source du projet Agri-Partenaires">Code source</a>
+                        </div>
+                        <div class="project-card">
+                            <img src="../images-projetencours/juste-prix/justePrix.gif" alt="Image représentant le Projet Juste-Prix" title="Image Projet Juste-Prix">
+                            <h3 title="Titre du projet Juste-Prix">Juste Prix</h3>
+                            <p title="Texte indiquant une description du projet Juste-Prix">Plateforme permettant de jouer à un jeu qui consiste à deviner un nombre</p>
+                            <a href="https://adnamdemaurisa59.github.io/Juste-Prix-JS/" tabindex="21" class="btn" target="_blank" title="Cliquer ici pour voir le projet Juste-Prix">Voir le site</a>
+                            <a href="https://github.com/AdnamDemaurisa59/Juste-Prix-JS" tabindex="22" class="btn" target="_blank"  title="Cliquer ici pour voir le code source du projet Juste-Prix">Code source</a>
+                        </div>
+                        <div class="project-card">
+                            <img src="../images-projetencours/immobilier/todo-hoverNav.gif" alt="Image représentant le Projet Immobilier" title="Image Projet Immobilier">
+                            <h3 title="Titre du projet Immobilier">Immobilier</h3>
+                            <p title="Texte indiquant une description du projet Immobilier">Plateforme proposant différents types d'hébergement à prix libre</p>
+                            <a href="https://adnamdemaurisa59.github.io/projet-immobilier/" tabindex="23" class="btn" target="_blank"  title="Cliquer ici pour voir le projet Immobilier">Voir le site</a>
+                            <a href="https://github.com/AdnamDemaurisa59/projet-immobilier" tabindex="24" class="btn" target="_blank"  title="Cliquer ici pour voir le code source du projet Immobilier">Code source</a>
+                        </div>
+                        <div class="project-card">
+                            <img src="../images-projetencours/tea-station/product-1.jpeg" alt="Image représentant le Projet Tea-Station" title="Image Projet Tea-Station">
+                            <h3 title="Titre du projet Tea-Station">Tea Station</h3>
+                            <p title="Texte indiquant une description du projet Tea-Station">Plateforme proposant différents types de Thé</p>
+                            <a href="https://malika1526.github.io/Projet-Tea-Station/" tabindex="25" class="btn" target="_blank" title="Cliquer ici pour voir le projet Tea-Station">Voir le site</a>
+                            <a href="https://github.com/Malika1526/Projet-Tea-Station" tabindex="26" class="btn" target="_blank"  title="Cliquer ici pour voir le code source du projet Tea-Station">Code source</a>
+                        </div>
+                        <div class="project-card">
+                            <img src="../img/plateforme-dessin.png" alt="Image représentant le Projet Plateforme-Dessin" title="Image Projet Plateforme-Dessin">
+                            <h3 title="Titre du projet Plateforme-Dessin">Plateform Dessin</h3>
+                            <p title="Texte indiquant une description du projet Plateforme-Dessin">Plateforme proposant la possibilité de créer des dessins et de les télécharger</p>
+                            <a href="https://adnamdemaurisa59.github.io/Application-Dessin/" tabindex="27" class="btn" target="_blank" title="Cliquer ici pour voir le projet Plateform-Dessin">Voir le site</a>
+                            <a href="https://github.com/AdnamDemaurisa59/Application-Dessin" tabindex="28" class="btn" target="_blank" title="Cliquer ici pour voir le code source du projet Plateform-Dessin">Code source</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <!-- <div class="contact-content">
+                <form class="contact-form card" action="./html/confirmation.html" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Votre email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-input" placeholder="Votre message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Envoyer</button>
+                </form>
+            </div> -->
+            <section id="contact">
+                <form action="mailto:adnam.kouddemaurisa@outlook.fr" method="post" id="contactForm" class="contact-form" autocomplete="on">
+                    <label for="name">Votre nom</label>
+                    <input type="text" tabindex="30" id="name" name="name" placeholder="Entrez votre nom" required minlength="2" maxlength="50">
+                    <label for="prenom">Votre prénom</label>
+                    <input type="text" tabindex="31"  id="prenom" name="prenom" placeholder="Entrez votre prénom" required minlength="2" maxlength="50">
+                    <label for="tel">Votre numéro de téléphone</label>
+                    <input type="tel" tabindex="32" id="tel" name="tel" placeholder="Entrez votre numéro de téléphone" required pattern="[0-9]{10}" title="Entrez un numéro de téléphone à 10 chiffres">
+                    <label for="email">Votre adresse e-mail</label>
+                    <input type="email" id="email" name="email" tabindex="33" placeholder="Entrez votre email" required>
+                    <label for="message">Quel est votre message ?</label>
+                    <textarea name="message" id="message" tabindex="34" placeholder="Entrez votre message" required minlength="10" maxlength="500"></textarea>
+                    <button type="submit" tabindex="35" id="btnEnvoyerMail" aria-label="Cliquer sur le bouton pour envoyer un email"  class="btn">Envoyer</button>
+                </form>
+            </section>
+            <div class="icon-group">
+                <div class="linkedin">
+                    <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank" title="Redirection vers le profil Linkedin de Koud Demaurisa Adnam" tabindex="36">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a> 
+                  </div>
+                
+                <div class="github">
+                    <a href="https://github.com/AdnamDemaurisa59/portfolio-adnam" target="_blank" class="github" title="Redirection vers le github de ce portfolio" tabindex="37">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="comments">
         <h2>Commentaires et Notations</h2>
@@ -264,9 +368,8 @@
 
     </section>
 
-
-    <footer>
-        <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p>
+    <!-- <footer>
+        <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p> -->
         <!-- <div class="footer-nav">
             <a href="#" tabindex="46" title="">Accueil</a>
             <a href="#skills" tabindex="47" title="">Compétences</a>
@@ -274,11 +377,26 @@
             <a href="#about" tabindex="49" title="">À propos</a>
             <a href="#contact" tabindex="50" title="">Contact</a>
         </div> -->
+    <!-- </footer> -->
+
+    <footer>
+        <p>&copy;<span id="year"></span> Portfolio Koud Demaurisa Adnam. Tous droits réservés.</p>
     </footer>
 
     <!-- <script src="../js/animation.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script>
+       // Sélectionne l'élément avec l'ID "year"
+        const yearSpan = document.getElementById('year');
+
+        // Récupère l'année actuelle
+        const currentYear = new Date().getFullYear();
+
+        // Insère l'année dans le footer
+        yearSpan.textContent = currentYear;
+    </script>
 
 </body>
 </html>
