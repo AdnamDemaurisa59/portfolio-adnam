@@ -2,24 +2,6 @@
 "use strict";
 
 
-// Code pour l'animation de la section de présentation
-const firstPresentation = document.querySelector('.presentation');
-const secondPresentation = document.querySelector('.presentation2');
-
-// Ajoute un écouteur qui détecte la fin de l'animation de la première section
-firstPresentation.addEventListener('animationend', () => {
-
-    firstPresentation.style.transition = 'opacity 6s ease';
-    firstPresentation.style.opacity = '0';
-
-    // Attend la fin de la transition pour afficher la deuxième section
-    setTimeout(() => {
-        firstPresentation.style.display = 'none'; // Masque la première section
-        secondPresentation.style.display = 'flex'; // Affiche la deuxième section
-        secondPresentation.style.transition = 'opacity 6s ease';
-        secondPresentation.style.opacity = '1';
-    }, 5200);
-});
 
 
 // Code pour la section Compétences
@@ -122,29 +104,29 @@ function initHeroAnimation() {
 }
 
 // Animation des projets
-function initProjectsAnimation() {
-    const projects = gsap.utils.toArray('.project-card');
+// function initProjectsAnimation() {
+//     const projects = gsap.utils.toArray('.project-card');
     
-    projects.forEach(project => {
-        const overlay = project.querySelector('.project-overlay');
+//     projects.forEach(project => {
+//         const overlay = project.querySelector('.project-overlay');
         
-        project.addEventListener('mouseenter', () => {
-            gsap.to(overlay, {
-                opacity: 1,
-                duration: 0.3,
-                ease: "power2.out"
-            });
-        });
+//         project.addEventListener('mouseenter', () => {
+//             gsap.to(overlay, {
+//                 opacity: 1,
+//                 duration: 0.3,
+//                 ease: "power2.out"
+//             });
+//         });
         
-        project.addEventListener('mouseleave', () => {
-            gsap.to(overlay, {
-                opacity: 0,
-                duration: 0.3,
-                ease: "power2.out"
-            });
-        });
-    });
-}
+//         project.addEventListener('mouseleave', () => {
+//             gsap.to(overlay, {
+//                 opacity: 0,
+//                 duration: 0.3,
+//                 ease: "power2.out"
+//             });
+//         });
+//     });
+// }
 
 // Curseur personnalisé
 function initCustomCursor() {
@@ -242,7 +224,6 @@ ScrollTrigger.create({
 
 
 
-
 //Code pour le caroussel de la section projects
 window.onload = (e) => {
     e.preventDefault();
@@ -279,33 +260,6 @@ const observer = new IntersectionObserver((entries) => {
     root: null, 
     threshold: 0.5 
 });
-
-
-
-//Code pour la section Compétences
-
-
-// gsap.to(".boxA", {
-//     x: 935,
-//     rotation: 360,
-//     duration: 4,
-//     toggleActions : "play reverse none reset",
-// });
-
-// gsap.to(".boxC", {
-//     x: -935,
-//     rotation: 360,
-//     duration: 4,
-//     toggleActions : "play reverse none reset",
-// });
-
-// gsap.to(".boxB", {
-//     y: 50,
-//     rotation: 360,
-//     duration: 4,
-//     toggleActions : "play reverse none reset", 
-// })
-
 
 
 //Code pour le caroussel de la section projects
@@ -355,8 +309,3 @@ window.addEventListener("resize", handleCardsOnMobile);
 
 // Ce code permet de détecter les changements dynamiques
 isMobile.addEventListener("change", handleCardsOnMobile);
-
-
-
-// MAJ PORTFOLIO---------------------------------------------------------------------------------------
-
