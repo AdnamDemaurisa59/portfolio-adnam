@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeroAnimation();
     initSectionAnimations();
     initSkillsSlider();
-    initProjectsAnimation();
+    // initProjectsAnimation();
     initCustomCursor();
     initTitleAnimations();
     initTimelineAnimation();
