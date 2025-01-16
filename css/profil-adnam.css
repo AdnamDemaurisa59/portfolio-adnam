@@ -1,33 +1,5 @@
 
 
-
-
-
-/* Section HTML - Header */
-/* header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: #395C9F;
-    color: #fff;
-    width: 100%;
-    position: fixed;
-    top: 0px;
-    z-index: 1;
-
-}
-
-header h1 {
-    font-size: 15px;
-}
-
-.header-title a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-} */
-
 nav ul {
     list-style: none;
     display: flex;
@@ -52,7 +24,6 @@ nav ul li a:hover {
 }
 
 
-
 /* Section HTML - Footer */
 footer {
     padding: 20px;
@@ -72,10 +43,6 @@ footer .footer-nav a {
 footer .footer-nav a:hover {
     text-decoration: underline;
 }
-
-
-
-
 
 
 /* 
@@ -799,91 +766,6 @@ textarea.form-input {
     transition: transform 0.6s ease;
 }
 
-/* Styles du Carousel */
-/* .projects-carousel {
-    position: relative;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.carousel-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 1rem;
-    margin-bottom: 2rem;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.carousel-slide {
-    flex: 0 0 100%;
-    padding: 0 1rem;
-} */
-
-/* Navigation du Carousel */
-/* .carousel-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.carousel-btn {
-    background: var(--glass-bg);
-    border: 2px solid var(--color-blue);
-    color: var(--color-light);
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.carousel-btn:hover {
-    background: var(--color-blue);
-    transform: scale(1.1);
-}
-
-.carousel-dots {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.carousel-dot {
-    width: 0.75rem;
-    height: 0.75rem;
-    border-radius: 50%;
-    background: var(--glass-bg);
-    border: 2px solid var(--color-blue);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.carousel-dot.active {
-    background: var(--color-blue);
-    transform: scale(1.2);
-} */
-
-/* Animation des slides */
-/* .carousel-slide {
-    opacity: 0.5;
-    transform: scale(0.9);
-    transition: all 0.5s ease;
-}
-
-.carousel-slide.active {
-    opacity: 1;
-    transform: scale(1);
-} */
-
 
 /* Animations des sections */
 section {
@@ -1336,7 +1218,7 @@ section:nth-child(even) .card {
 
 /* Amélioration du contraste */
 .name::after {
-    content: 'ADNAM KOUD';
+    /* content: 'ADNAM KOUD'; */
     position: absolute;
     top: 0;
     left: 0;
@@ -1424,7 +1306,6 @@ section:nth-child(even) .card {
 .stat-label {
     transform: translateZ(15px);
 }
-
 
 
 /* Section HTML - Projets */
@@ -1643,7 +1524,7 @@ form textarea {
 /* Media Queries */
 
 /* Media Query pour les smartphones */
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
 
     .header-title {
         display: flex;
@@ -1652,7 +1533,6 @@ form textarea {
         background: #395C9F;
         color: #fff;
         width: 100%;
-
     }
 
     header nav ul {
@@ -1928,7 +1808,7 @@ form textarea {
 
 
 /* Media Query pour les tablettes */
-@media screen and (min-width: 750px) and (max-width: 1000px) {
+@media screen and (min-width: 768px) and (max-width: 1000px) {
 
     .mobile-nav, .mobile-menu-toggle {
         display: none; /* Masque le menu mobile sur les tablettes */

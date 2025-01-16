@@ -2,7 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Bienvenue sur mon portfolio. Je suis Adnam, développeur front-end passionné par les techologies web et les animations.">
+    <meta name="keywords" content="Développeur Front-End, HTML, CSS, JavaScript, Vue.Js, - Mon Portfolio">
+    <meta name="author" content="Koud Demaurisa Adnam">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Mon portfolio">
+    <meta property="og:description" content="Bienvenue sur mon portfolio. Je m'appelle Adnam, je suis un développeur front-end.">
+    <meta property="og:image" content="./img/Adnam-Photo.png">
+    <meta property="og:url" content="https://adnamdemaurisa59.github.io/portfolio-adnam/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="theme-color" content="#000000">
     <title>Rechargement</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,31 +26,11 @@
 
     <div class="container">
         <div class="name">
-            ADNAM KOUD DEMAURISA <br>DEVELOPPEUR FRONT-END
+            <div>ADNAM KOUD DEMAURISA <br>DEVELOPPEUR FRONT-END</div>
         </div>
         <a href="./html/profil-adnam.html" title="" class="portfolio-button">Cliquer pour accéder à mon portfolio</a>
         <!-- <button class="portfolio-button">Cliquer pour accéder à mon portfolio</button> -->
     </div>
-
-    <script>
-        const name = document.querySelector('.name');
-        let shadows = [];
-        const length = 10;
-
-        // L'angle d'inclinaison des ombres (multiplicateur pour les décalages)
-        const angle = 1;
-
-        // Boucle pour générer les couches d'ombres successives
-        for (let i = 1; i <= length; i++) {
-            // Ajout d'une ombre au tableau sous la forme "x-offset y-offset couleur"
-            shadows.push(`${i}px ${i * angle}px #aaa`);
-        }
-
-        // Associe toutes les ombres du tableau en une chaîne, séparées par des virgules
-        // Cela permet de créer plusieurs ombres en une seule déclaration CSS
-        name.style.textShadow = shadows.join(', ');
-    </script>
-
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -61,8 +55,6 @@
         };
         });
       </script>
-      
-    
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script> -->
     <!-- <script src="./script.js"></script> -->

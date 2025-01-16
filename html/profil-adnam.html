@@ -5,18 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="Bienvenue sur mon portfolio. Je suis Adnam, développeur front-end passionné par le web et les animations.">
-    <meta name="keywords" content="Développeur Front-End, HTML, CSS, JavaScript, Portfolio">
+    <meta name="description" content="Bienvenue sur mon portfolio. Je suis Adnam, développeur front-end passionné par les techologies web et les animations.">
+    <meta name="keywords" content="Développeur Front-End, HTML, CSS, JavaScript, Vue.Js, - Mon Portfolio">
     <meta name="author" content="Koud Demaurisa Adnam">
     <meta name="robots" content="index, follow">
     
     <meta property="og:title" content="Mon portfolio">
     <meta property="og:description" content="Bienvenue sur mon portfolio. Je m'appelle Adnam, je suis un développeur front-end.">
-    <meta property="og:image" content="../img/Adnam-Photo CV.jpeg">
+    <meta property="og:image" content="../img/Adnam-Photo.png">
     <meta property="og:url" content="https://adnamdemaurisa59.github.io/portfolio-adnam/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
-    
     <meta name="theme-color" content="#000000">
 
     <title>Mon portfolio</title>
@@ -32,35 +31,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script> -->
     
-    <!-- <script src="../js/animation.js" defer></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script> -->
     <!-- <script src="../js/animation.js" defer></script> -->
     
 </head>
 <body>
 
-    <!-- <header>
-        <div class="header-title">
-            <div>
-                <h1><a href="#" tabindex="1"  title="Bienvenue sur Mon Portfolio">Mon Portfolio</a></h1>
+    <header>
+        <nav class="nav" id="header">
+            <div class="nav-container">
+                <a href="#" class="nav-logo" tabindex="1">AKD</a>
+                <div class="nav-links">
+                    <a href="#about" class="nav-link" tabindex="2" aria-label="" title="">À propos</a>
+                    <a href="#skills" class="nav-link" tabindex="3" aria-label="" title="">Compétences</a>
+                    <a href="#experience" class="nav-link" tabindex="4" aria-label="" title="">Parcours</a>
+                    <a href="#projects" class="nav-link" tabindex="5" aria-label="" title="">Projets</a>
+                    <a href="#contact" class="nav-link" tabindex="6" aria-label="" title="">Contact</a>
+                    <!-- <a href="#comments" class="nav-link">Notations</a> -->
+                </div>
             </div>
-            <button class="mobile-menu-toggle" aria-label="Ouvrir le menu mobile">
-                <i class="fa-solid fa-bars" title="Ouvrir le menu mobile"></i>                
-            </button>
-        </div>
-        <nav class="parcourir" aria-label="Navigation principale">
-            <ul>
-                <li><a href="#" tabindex="2"  title="Cliquer ici pour revenir en haut de la page">Accueil</a></li>
-                <li><a href="#skills" tabindex="3"  title="Cliquer ici pour voir les compétences">Compétences</a></li>
-                <li><a href="#projects" tabindex="4"  title="Cliquer ici pour voir les projets">Projets</a></li>
-                <li><a href="#about" tabindex="5"  title="Cliquer ici pour en savoir plus sur moi">À propos</a></li>
-                <li><a href="#contact" tabindex="6"  title="Cliquer ici pour me contacter">Contact</a></li>
-            </ul>
-        </nav>
-    </header> -->
+        </nav> 
+    </header>
 
+    <!-- Section - Menu pour les écrans mobiles  -->
     <div class="open-menu">
         <button class="mobile-menu-toggle" aria-label="Ouvrir le menu mobile">
             <i class="fa-solid fa-bars" title="Ouvrir le menu mobile"></i>                
@@ -73,19 +65,34 @@
                     <i class="fa-solid fa-xmark" title="Cliquer ici pour fermer le menu"></i>
                 </div>
                 <a href="#" title="Cliquer ici pour revenir en haut de la page">
-                    <i class="fa-solid fa-house"></i> Accueil</a>
-                <a href="#skills" title="Cliquer ici pour voir les compétences">
-                    <i class="fa-solid fa-dumbbell"></i> Compétences</a>
-                <a href="#projects" title="Cliquer ici pour voir les projets">
-                    <i class="fa-solid fa-suitcase"></i> Projets</a>
+                    <i class="fa-solid fa-house"></i> 
+                    Accueil</a>
+                <a href="#presentation">
+                    <i class="fa-solid fa-address-card" title="Cliquer ici pour en savoir plus sur moi"></i>
+                    Presentation profil</a>
                 <a href="#about" title="Cliquer ici pour en savoir plus sur moi">
-                    <i class="fa-regular fa-address-card"></i> À propos de moi</a>
+                    <i class="fa-regular fa-address-card"></i> 
+                    À propos</a>
+
+                <a href="#skills" title="Cliquer ici pour voir les compétences">
+                    <i class="fa-solid fa-dumbbell"></i>
+                     Compétences</a>
+                
+                <a href="#experience" title="Cliquer ici pour voir mon parcours">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                     Parcours</a>
+                <a href="#projects" title="Cliquer ici pour voir les projets">
+                    <i class="fa-solid fa-suitcase"></i>
+                     Projets</a>
                 <a href="#contact"  title="Cliquer ici pour me contacter">
-                    <i class="fa-regular fa-message"></i> Contact</a>
+                    <i class="fa-regular fa-message"></i> 
+                    Contact</a>
+                <a href="#comments" title="Cliquer ici pour laisser un avis sur mon portfolio"> <i class="fa-solid fa-comment"></i>
+                    Commentaires &  Notation</a>
                 <div class="icon-github">
                     <a href="https://github.com/AdnamDemaurisa59/portfolio-adnam" target="_blank" title="Redirection vers le github du portfolio" aria-label="Cliquer ici pour voir le github du portfolio">
-                        <i class="fa-brands fa-github" title="Redirection vers le github du portfolio"></i> GITHUB 
-                    </a>
+                        <i class="fa-brands fa-github" title="Redirection vers le github du portfolio"></i> 
+                        GITHUB</a>
                 </div>
                 <div class="icon-linkedin">
                     <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank" title="Redirection vers le profil Linkedin de Koud Demaurisa Adnam" aria-label="Cliquer ici pour voir mon profil Linkedin">
@@ -93,23 +100,11 @@
                 </div>
             </nav>
         </div>
-    
-
 
     <!-- MAJ PORTFOLIO -->
 
-    <nav class="nav" id="">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">AKD</a>
-            <div class="nav-links">
-                <a href="#about" class="nav-link">À propos</a>
-                <a href="#skills" class="nav-link">Compétences</a>
-                <a href="#projects" class="nav-link">Projets</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-        </div>
-    </nav>
-
+ 
+    <!-- Section  -->
     <section class="hero">
         <div class="hero-content">
             <h1 class="main-title">
@@ -120,25 +115,26 @@
                     je donne vie à vos projets avec passion et expertise.
                 </p>
             </h1>
-            <div class="scroll-indicator">
+            <div class="scroll-indicator" tabindex="7">
                 <span>Découvrir</span>
                 <i class="fas fa-chevron-down"></i>
             </div>
         </div>
     </section>
 
+    <!-- Section Presentation de moi  -->
     <section class="presentation" id="presentation">
         <div class="container">
             <div class="presentation-grid">
                 <div class="presentation-image">
-                    <img src="../img/Adnam-Photo.png" alt="Adnam Koud">
+                    <img src="../img/Adnam-Photo.png" alt="Adnam Koud" tabindex="8" aria-label="" title="Photo Koud Demaurisa ">
                 </div>
-                <div class="presentation-content card">
+                <div class="presentation-content card" tabindex="9">
                     <h3>Développeur Front-end Passionné</h3>
                     <p>Spécialisé dans la création d'expériences web innovantes et performantes. Mon approche combine créativité et expertise technique pour donner vie à des interfaces utilisateur exceptionnelles.</p>
                     <div class="presentation-stats">
                         <div class="stat">
-                            <span class="stat-number">2+</span>
+                            <span class="stat-number" aria-label="" title="">2+</span>
                             <span class="stat-label">Années d'expérience</span>
                         </div>
                         <div class="stat">
@@ -151,10 +147,11 @@
         </div>
     </section>
 
+    <!-- Section A propos de moi  -->
     <section class="about" id="about">
         <div class="container">
-            <h2>À Propos</h2>
-            <div class="about-content">
+            <h2 tabindex="10">À Propos</h2>
+            <div class="about-content" tabindex="11">
                 <div class="about-card card">
                     <div class="about-text">
                         <p>Je suis passionné par le développement web et j’adore concevoir des interfaces modernes et interactives. Au fil de mon parcours, j’ai pu développer une solide expertise en front-end, en mettant toujours l’accent sur l’expérience utilisateur et des animations qui rendent les interactions fluides.</p>
@@ -165,9 +162,10 @@
         </div>
     </section>
 
+    <!-- Sections Compétences - Language Programmation -->
     <section class="skills" id="skills">
         <div class="container">
-            <h2>Compétences</h2>
+            <h2 tabindex="12">Compétences</h2>
             <div class="skills-slider">
                 <div class="skills-track">
                     <!-- Premier groupe -->
@@ -218,11 +216,12 @@
         </div>
     </section>
 
+    <!-- Section Expérience - Parcours Scolaires-->
     <section class="experience" id="experience">
         <div class="container">
-            <h2>Parcours</h2>
+            <h2 tabindex="13">Parcours</h2>
             <div class="timeline">
-                <div class="timeline-item">
+                <div class="timeline-item" tabindex="14">
                     <div class="timeline-content card">
                         <h3>Formation Développeur Web à 26ACADEMY</h3>
                         <p class="timeline-date">Avril 2022 - Juillet 2022</p>
@@ -230,69 +229,70 @@
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-content card">
+                    <div class="timeline-content card" tabindex="15">
                         <h3>Bachelor, Programmation informatique, applications spécifiques à  Lille Ynov Campus                        </h3>
                         <p class="timeline-date">Septembre 2023 - Juin 2024</p>
                         <p>Réalisation de sites web, focus sur l'expérience utilisateur. 
                             <br>Différents projets réalisés :<br>-Site e-commerce : (HTML, CSS, JavaScript) et back-end (Node.js).
                             <br>-Forum web complet : HTML, CSS, JavaScript, un serveur en Go, et une base de données SQLite.
                             <br>-Carnet d’adresses : Application web permettant de stocker les coordonnées via LocalStorage (HTML, CSS, JavaScript).</p>
-                            <a href="https://www.ynov.com/campus/lille" target="_blank" title="Cliquer ici pour voir le site de l'école">Voir l'Ecole</a>
+                            <!-- <a href="https://www.ynov.com/campus/lille" target="_blank" title="Cliquer ici pour voir le site de l'école">Voir l'Ecole</a> -->
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content card">
+                <div class="timeline-item" tabindex="16">
+                    <div class="timeline-content card" >
                         <h3>Formation Développeur Web & Web Mobile à l'AFCI </h3>
                         <p class="timeline-date">Septembre 2024 - Mai 2025</p>
                         <p>Formation en développement web & web mobile, avec pour but de savoir créer un site internet ou une application mobile.</p>
                         <p>Langages Web appris : HTML5, CSS3, JAVASCRIPT, VUE.JS, PHP, SQL, DOCKER, </p>
-                        <a href="https://www.ynov.com/campus/lille" target="_blank" title="Cliquer ici pour voir le site de l'organisme">Voir l'organisme de formation</a>
+                        <!-- <a href="https://www.ynov.com/campus/lille" target="_blank" title="Cliquer ici pour voir le site de l'organisme">Voir l'organisme de formation</a> -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Section Projets Réalisées -->
     <section class="projects" id="projects">
         <div class="container">
-            <h2>Projets</h2>
+            <h2 tabindex="17">Projets</h2>
             <section>
                 <div class="projects-container">
                     <div class="carousel-inner">
-                        <div class="project-card">
+                        <div class="project-card" tabindex="18">
                             <img src="../images-projetencours/logo-AgriPartenires.jpeg" alt="Logo représentant l'entreprise Agri-Partenaires" title="Logo entreprise Agri-Partenaires">
                             <h3 title="Titre du nom de l'entreprise : Agri-Partenaires">Agri-partenaires</h3>
                             <p title="Texte indiquant une description du site Agri-Partenaires">Agri-Partenaires propose des services dans le domaine de l'agriculture</p>
                             <a href="https://adnamdemaurisa59.github.io/Agri-Partenaires1/" tabindex="19"  class="btn" target="_blank" title="Cliquer ici pour voir le projet" title="Cliquer ici pour voir le projet Agri-Partenaires">Voir le site</a>
                             <a href="https://github.com/AdnamDemaurisa59/Agri-Partenaires1" tabindex="20"  class="btn" target="_blank"  title="Cliquer ici pour voir le code source du projet Agri-Partenaires">Code source</a>
                         </div>
-                        <div class="project-card">
+                        <div class="project-card" tabindex="21">
                             <img src="../images-projetencours/juste-prix/justePrix.gif" alt="Image représentant le Projet Juste-Prix" title="Image Projet Juste-Prix">
                             <h3 title="Titre du projet Juste-Prix">Juste Prix</h3>
                             <p title="Texte indiquant une description du projet Juste-Prix">Plateforme permettant de jouer à un jeu qui consiste à deviner un nombre</p>
-                            <a href="https://adnamdemaurisa59.github.io/Juste-Prix-JS/" tabindex="21" class="btn" target="_blank" title="Cliquer ici pour voir le projet Juste-Prix">Voir le site</a>
-                            <a href="https://github.com/AdnamDemaurisa59/Juste-Prix-JS" tabindex="22" class="btn" target="_blank"  title="Cliquer ici pour voir le code source du projet Juste-Prix">Code source</a>
+                            <a href="https://adnamdemaurisa59.github.io/Juste-Prix-JS/" tabindex="22" class="btn" target="_blank" title="Cliquer ici pour voir le projet Juste-Prix">Voir le site</a>
+                            <a href="https://github.com/AdnamDemaurisa59/Juste-Prix-JS" tabindex="23" class="btn" target="_blank"  title="Cliquer ici pour voir le code source du projet Juste-Prix">Code source</a>
                         </div>
-                        <div class="project-card">
+                        <div class="project-card" tabindex="24">
                             <img src="../images-projetencours/immobilier/todo-hoverNav.gif" alt="Image représentant le Projet Immobilier" title="Image Projet Immobilier">
                             <h3 title="Titre du projet Immobilier">Immobilier</h3>
                             <p title="Texte indiquant une description du projet Immobilier">Plateforme proposant différents types d'hébergement à prix libre</p>
-                            <a href="https://adnamdemaurisa59.github.io/projet-immobilier/" tabindex="23" class="btn" target="_blank"  title="Cliquer ici pour voir le projet Immobilier">Voir le site</a>
-                            <a href="https://github.com/AdnamDemaurisa59/projet-immobilier" tabindex="24" class="btn" target="_blank"  title="Cliquer ici pour voir le code source du projet Immobilier">Code source</a>
+                            <a href="https://adnamdemaurisa59.github.io/projet-immobilier/" tabindex="25" class="btn" target="_blank"  title="Cliquer ici pour voir le projet Immobilier">Voir le site</a>
+                            <a href="https://github.com/AdnamDemaurisa59/projet-immobilier" tabindex="26" class="btn" target="_blank"  title="Cliquer ici pour voir le code source du projet Immobilier">Code source</a>
                         </div>
-                        <div class="project-card">
+                        <div class="project-card" tabindex="27">
                             <img src="../images-projetencours/tea-station/product-1.jpeg" alt="Image représentant le Projet Tea-Station" title="Image Projet Tea-Station">
                             <h3 title="Titre du projet Tea-Station">Tea Station</h3>
                             <p title="Texte indiquant une description du projet Tea-Station">Plateforme proposant différents types de Thé</p>
-                            <a href="https://malika1526.github.io/Projet-Tea-Station/" tabindex="25" class="btn" target="_blank" title="Cliquer ici pour voir le projet Tea-Station">Voir le site</a>
-                            <a href="https://github.com/Malika1526/Projet-Tea-Station" tabindex="26" class="btn" target="_blank"  title="Cliquer ici pour voir le code source du projet Tea-Station">Code source</a>
+                            <a href="https://malika1526.github.io/Projet-Tea-Station/" tabindex="28" class="btn" target="_blank" title="Cliquer ici pour voir le projet Tea-Station">Voir le site</a>
+                            <a href="https://github.com/Malika1526/Projet-Tea-Station" tabindex="29" class="btn" target="_blank"  title="Cliquer ici pour voir le code source du projet Tea-Station">Code source</a>
                         </div>
-                        <div class="project-card">
+                        <div class="project-card" tabindex="30">
                             <img src="../img/plateforme-dessin.png" alt="Image représentant le Projet Plateforme-Dessin" title="Image Projet Plateforme-Dessin">
                             <h3 title="Titre du projet Plateforme-Dessin">Plateform Dessin</h3>
                             <p title="Texte indiquant une description du projet Plateforme-Dessin">Plateforme proposant la possibilité de créer des dessins et de les télécharger</p>
-                            <a href="https://adnamdemaurisa59.github.io/Application-Dessin/" tabindex="27" class="btn" target="_blank" title="Cliquer ici pour voir le projet Plateform-Dessin">Voir le site</a>
-                            <a href="https://github.com/AdnamDemaurisa59/Application-Dessin" tabindex="28" class="btn" target="_blank" title="Cliquer ici pour voir le code source du projet Plateform-Dessin">Code source</a>
+                            <a href="https://adnamdemaurisa59.github.io/Application-Dessin/" tabindex="31" class="btn" target="_blank" title="Cliquer ici pour voir le projet Plateform-Dessin">Voir le site</a>
+                            <a href="https://github.com/AdnamDemaurisa59/Application-Dessin" tabindex="32" class="btn" target="_blank" title="Cliquer ici pour voir le code source du projet Plateform-Dessin">Code source</a>
                         </div>
                     </div>
                 </div>
@@ -301,47 +301,33 @@
         </div>
     </section>
 
-    <section class="contact" id="contact">
+    <!-- Section Contact - Formulaire -->
+    <section class="contact">
         <div class="container">
-            <h2>Contact</h2>
-            <!-- <div class="contact-content">
-                <form class="contact-form card" action="./html/confirmation.html" method="post">
-                    <div class="form-group">
-                        <input type="text" class="form-input" placeholder="Votre nom" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-input" placeholder="Votre email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-input" placeholder="Votre message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Envoyer</button>
-                </form>
-            </div> -->
+            <h2 tabindex="33">Contact</h2>
             <section id="contact">
-                <form action="mailto:adnam.kouddemaurisa@outlook.fr" method="post" id="contactForm" class="contact-form" autocomplete="on">
+                <form action="mailto:adnam.kouddemaurisa@outlook.fr" method="post" id="contactForm" class="contact-form" autocomplete="on" tabindex="34">
                     <label for="name">Votre nom</label>
-                    <input type="text" tabindex="30" id="name" name="name" placeholder="Entrez votre nom" required minlength="2" maxlength="50">
+                    <input type="text" tabindex="35" id="name" name="name" placeholder="Entrez votre nom" required minlength="2" maxlength="50">
                     <label for="prenom">Votre prénom</label>
-                    <input type="text" tabindex="31"  id="prenom" name="prenom" placeholder="Entrez votre prénom" required minlength="2" maxlength="50">
+                    <input type="text" tabindex="36"  id="prenom" name="prenom" placeholder="Entrez votre prénom" required minlength="2" maxlength="50">
                     <label for="tel">Votre numéro de téléphone</label>
-                    <input type="tel" tabindex="32" id="tel" name="tel" placeholder="Entrez votre numéro de téléphone" required pattern="[0-9]{10}" title="Entrez un numéro de téléphone à 10 chiffres">
+                    <input type="tel" tabindex="37" id="tel" name="tel" placeholder="Entrez votre numéro de téléphone" required pattern="[0-9]{10}" title="Entrez un numéro de téléphone à 10 chiffres">
                     <label for="email">Votre adresse e-mail</label>
-                    <input type="email" id="email" name="email" tabindex="33" placeholder="Entrez votre email" required>
+                    <input type="email" id="email" name="email" tabindex="38" placeholder="Entrez votre email" required>
                     <label for="message">Quel est votre message ?</label>
-                    <textarea name="message" id="message" tabindex="34" placeholder="Entrez votre message" required minlength="10" maxlength="500"></textarea>
-                    <button type="submit" tabindex="35" id="btnEnvoyerMail" aria-label="Cliquer sur le bouton pour envoyer un email"  class="btn">Envoyer</button>
+                    <textarea name="message" id="message" tabindex="39" placeholder="Entrez votre message" required minlength="10" maxlength="500"></textarea>
+                    <button type="submit" tabindex="40" id="btnEnvoyerMail" aria-label="Cliquer sur le bouton pour envoyer un email"  class="btn">Envoyer</button>
                 </form>
             </section>
             <div class="icon-group">
                 <div class="linkedin">
-                    <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank" title="Redirection vers le profil Linkedin de Koud Demaurisa Adnam" tabindex="36">
+                    <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank" title="Redirection vers le profil Linkedin de Koud Demaurisa Adnam" tabindex="41">
                         <i class="fa-brands fa-linkedin"></i>
                     </a> 
                   </div>
-                
                 <div class="github">
-                    <a href="https://github.com/AdnamDemaurisa59/portfolio-adnam" target="_blank" class="github" title="Redirection vers le github de ce portfolio" tabindex="37">
+                    <a href="https://github.com/AdnamDemaurisa59/portfolio-adnam" target="_blank" class="github" title="Redirection vers le github de ce portfolio" tabindex="42">
                         <i class="fa-brands fa-github"></i>
                     </a>
                 </div>
@@ -349,41 +335,33 @@
         </div>
     </section>
 
+    <!-- Section Formulaire Commentaires & Notations -->
     <section id="comments" class="comments">
-        <h2>Commentaires et Notations</h2>
-        <div class="comment-form">
+        <h2 tabindex="43">Commentaires et Notations</h2>
+        <div class="comment-form" tabindex="44">
             <h3>Laissez un commentaire et votre avis sur mon portfolio</h3>
-            <form id="commentForm" method="post">
-                <textarea name="comments" placeholder="Votre commentaire" tabindex="38" required></textarea>
+            <form id="commentForm" method="post" action="">
+                <textarea name="comments" placeholder="Votre commentaire" tabindex="45" required></textarea>
                 <div class="rating">
                     <div class="stars" data-rating="0">
-                        <span class="star" tabindex="39" data-value="1">&starf;</span>
-                        <span class="star" tabindex="40" data-value="2">&starf;</span>
-                        <span class="star" tabindex="41" data-value="3">&starf;</span>
-                        <span class="star" tabindex="42" data-value="4">&starf;</span>
-                        <span class="star" tabindex="43" data-value="5">&starf;</span>
+                        <span class="star" tabindex="46" data-value="1">&starf;</span>
+                        <span class="star" tabindex="47" data-value="2">&starf;</span>
+                        <span class="star" tabindex="48" data-value="3">&starf;</span>
+                        <span class="star" tabindex="49" data-value="4">&starf;</span>
+                        <span class="star" tabindex="50" data-value="5">&starf;</span>
                     </div>
-                    <div class="rating-value" tabindex="44">0 / 5</div>
+                    <div class="rating-value">0 / 5</div>
                 </div>
-                <button id="btnEnvoyerMail" type="submit" class="btn" aria-label="Cliquer sur le bouton pour envoyer votre commentaire et votre notation de mon portfolio" tabindex="45">Envoyer</button>
+                <button id="btnEnvoyerMail" type="submit" class="btn" aria-label="Cliquer sur le bouton pour envoyer votre commentaire et votre notation de mon portfolio" tabindex="51">Envoyer</button>
             </form>
         </div>     
-
     </section>
 
-    <!-- <footer>
-        <p>&copy; 2024 Mon Portfolio. Tous droits réservés.</p> -->
-        <!-- <div class="footer-nav">
-            <a href="#" tabindex="46" title="">Accueil</a>
-            <a href="#skills" tabindex="47" title="">Compétences</a>
-            <a href="#projects" tabindex="48" title="">Projets</a>
-            <a href="#about" tabindex="49" title="">À propos</a>
-            <a href="#contact" tabindex="50" title="">Contact</a>
-        </div> -->
-    <!-- </footer> -->
-
     <footer>
-        <p>&copy;<span id="year"></span> Portfolio Koud Demaurisa Adnam. Tous droits réservés.</p>
+        <p>
+            <span tabindex="52">&copy;<span id="year"></span> 
+            Portfolio Koud Demaurisa Adnam. Tous droits réservés.</span>
+        </p>
     </footer>
 
     <!-- <script src="../js/animation.js"></script> -->
