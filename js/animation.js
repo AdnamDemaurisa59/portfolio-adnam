@@ -1,9 +1,6 @@
 
 "use strict";
 
-
-
-
 // Code pour la section Compétences
 
 gsap.registerPlugin(ScrollTrigger);
@@ -103,31 +100,6 @@ function initHeroAnimation() {
     });
 }
 
-// Animation des projets
-// function initProjectsAnimation() {
-//     const projects = gsap.utils.toArray('.project-card');
-    
-//     projects.forEach(project => {
-//         const overlay = project.querySelector('.project-overlay');
-        
-//         project.addEventListener('mouseenter', () => {
-//             gsap.to(overlay, {
-//                 opacity: 1,
-//                 duration: 0.3,
-//                 ease: "power2.out"
-//             });
-//         });
-        
-//         project.addEventListener('mouseleave', () => {
-//             gsap.to(overlay, {
-//                 opacity: 0,
-//                 duration: 0.3,
-//                 ease: "power2.out"
-//             });
-//         });
-//     });
-// }
-
 // Curseur personnalisé
 function initCustomCursor() {
     const cursor = document.createElement('div');
@@ -206,7 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeroAnimation();
     initSectionAnimations();
     initSkillsSlider();
-    // initProjectsAnimation();
     initCustomCursor();
     initTitleAnimations();
     initTimelineAnimation();

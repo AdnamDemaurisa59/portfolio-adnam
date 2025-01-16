@@ -35,7 +35,9 @@
     line-height: 1.1;
     /* text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); */
     display: block;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
+    margin-bottom: 40px ;
+
   }
   .name div {
     position: absolute;
@@ -49,9 +51,8 @@
     -webkit-background-clip: text;
     background-clip: text;
     width: 100%;
-
   }
-  
+
   .name::after {
     content: "ADNAM KOUD DEMAURISA \A DEVELOPPEUR FRONT-END";
     color: transparent;

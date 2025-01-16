@@ -1,7 +1,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #C7BFBD;
     margin: 0;
     padding: 0;
     display: flex;
@@ -16,6 +16,11 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+}
+
+.confirmation-container:hover {
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+
 }
 
 h1 {

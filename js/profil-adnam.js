@@ -1,31 +1,66 @@
+"use strict";
 
-
-
-// Code pour l'envoi de mail
-function afficherEmail(nom, prenom, num, email, message) {
+// Fonction pour créer et ouvrir le mail
+function afficherEmail(nom, prenom, num, email, sujet, message) {
     let contact = "adnam.kouddemaurisa@outlook.fr";
-    let subject = "1er Contact";
-    let body = message;
-    let mailto = `mailto:${contact}?subject=${subject}&body=Bonjour,%0A%0A$${encodeURIComponent(body)}%0A%0ABien Cordialement%0A%0A${nom} ${prenom}%0A%0A${num}`;
-    window.location.href = mailto;
+    
+    // Corps du mail avec mise en forme verticale
+    let body = `
+Bonjour,
+
+Nom : ${nom}
+Prénom : ${prenom}
+Numéro de téléphone : ${num}
+Adresse e-mail : ${email}
+
+Message :
+${message}
+
+Bien cordialement,
+${nom} ${prenom}
+    `.trim();
+
+    // Remplacement des sauts de ligne par %0A pour mailto
+    let formattedBody = body.replace(/\n/g, "%0A");
+
+    // Construction du lien mailto avec le sujet choisi par l'utilisateur
+    let mailto = `mailto:${contact}?subject=${encodeURIComponent(sujet)}&body=${formattedBody}`;
+   // Ouvre le client de messagerie
+   window.location.href = mailto;
+
+   // Redirection vers la page de confirmation après un court délai
+   setTimeout(() => {
+    window.location.href = "confirmation.html";
+}, 1000); // Délai d'une seconde pour s'assurer que le mailto est déclenché
 }
 
+// Script pour gérer l'envoi via le formulaire
+function script() {
+    document.getElementById("btnEnvoyerMail").addEventListener("click", (event) => {
+        event.preventDefault(); // Empêche le rechargement de la page
+        
+        // Récupération des valeurs du formulaire
+        let nom = document.getElementById("nom").value.trim();
+        let prenom = document.getElementById("prenom").value.trim();
+        let num = document.getElementById("num").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let sujet = document.getElementById("sujet").value.trim();
+        let message = document.getElementById("message").value.trim();
 
-// Code pour le formulaire de contact
-// function script() {
-//     let contactForm = document.getElementById("contactForm");
-//     document.getElementById("btnEnvoyerMail").addEventListener("click", (event) => {
-//         event.preventDefault();
-//         let nom = document.getElementById("nom").value;
-//         let prenom = document.getElementById("prenom").value;
-//         let num = document.getElementById("num").value;
-//         let email = document.getElementById("email").value;
-//         let message = document.getElementById("message").value;
-//         afficherEmail(nom, prenom, num, email, message);
-//     });
-// }
+        // Vérification que tous les champs sont remplis
+        if (!nom || !prenom || !num || !email || !sujet || !message) {
+            alert("Tous les champs doivent être remplis !");
+            return;
+        }
 
-// script();
+        // Appel de la fonction pour envoyer l'email
+        afficherEmail(nom, prenom, num, email, sujet, message);
+    });
+}
+
+// Initialisation
+script();
+
 
 
 //Code pour valider le formulaire de contact
@@ -72,7 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
 
 // Code pour le menu mobile
 document.addEventListener('DOMContentLoaded', function() {

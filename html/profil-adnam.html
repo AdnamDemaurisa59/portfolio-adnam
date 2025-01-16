@@ -25,27 +25,23 @@
     <script src="../js/profil-adnam.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
-       <!-- <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script> -->
-    
-    <!-- <script src="../js/animation.js" defer></script> -->
-    
+       <!-- <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">-->    
 </head>
 <body>
 
     <header>
         <nav class="nav" id="header">
             <div class="nav-container">
-                <a href="#" class="nav-logo" tabindex="1">AKD</a>
+                <a href="#" class="nav-logo" title="Cliquer ici pour revenir en haut de la page" tabindex="1">AKD</a>
                 <div class="nav-links">
-                    <a href="#about" class="nav-link" tabindex="2" aria-label="" title="">À propos</a>
-                    <a href="#skills" class="nav-link" tabindex="3" aria-label="" title="">Compétences</a>
-                    <a href="#experience" class="nav-link" tabindex="4" aria-label="" title="">Parcours</a>
-                    <a href="#projects" class="nav-link" tabindex="5" aria-label="" title="">Projets</a>
-                    <a href="#contact" class="nav-link" tabindex="6" aria-label="" title="">Contact</a>
+                    <a href="#about" class="nav-link" tabindex="2" aria-label="" title="Cliquer ici pour voir la section Â propos">À propos</a>
+                    <a href="#skills" class="nav-link" tabindex="3" aria-label="" title="Cliquer ici pour voir la section Compétences">Compétences</a>
+                    <a href="#experience" class="nav-link" tabindex="4" aria-label="" title="Cliquer ici pour voir la section Parcours">Parcours</a>
+                    <a href="#projects" class="nav-link" tabindex="5" aria-label="" title="Cliquer ici pour voir la section Projets">Projets</a>
+                    <a href="#contact" class="nav-link" tabindex="6" aria-label="" title="Cliquer ici pour voir la section Contact">Contact</a>
                     <!-- <a href="#comments" class="nav-link">Notations</a> -->
                 </div>
             </div>
@@ -306,20 +302,29 @@
         <div class="container">
             <h2 tabindex="33">Contact</h2>
             <section id="contact">
-                <form action="mailto:adnam.kouddemaurisa@outlook.fr" method="post" id="contactForm" class="contact-form" autocomplete="on" tabindex="34">
-                    <label for="name">Votre nom</label>
-                    <input type="text" tabindex="35" id="name" name="name" placeholder="Entrez votre nom" required minlength="2" maxlength="50">
+                <form id="contactForm" class="contact-form" autocomplete="on" tabindex="34">
+                    <label for="nom">Votre nom</label>
+                    <input type="text" tabindex="35" id="nom" name="nom" placeholder="Entrez votre nom" required minlength="2" maxlength="50">
+                    
                     <label for="prenom">Votre prénom</label>
-                    <input type="text" tabindex="36"  id="prenom" name="prenom" placeholder="Entrez votre prénom" required minlength="2" maxlength="50">
-                    <label for="tel">Votre numéro de téléphone</label>
-                    <input type="tel" tabindex="37" id="tel" name="tel" placeholder="Entrez votre numéro de téléphone" required pattern="[0-9]{10}" title="Entrez un numéro de téléphone à 10 chiffres">
+                    <input type="text" tabindex="36" id="prenom" name="prenom" placeholder="Entrez votre prénom" required minlength="2" maxlength="50">
+                    
+                    <label for="num">Votre numéro de téléphone</label>
+                    <input type="tel" tabindex="37" id="num" name="num" placeholder="Entrez votre numéro de téléphone" required pattern="[0-9]{10}" title="Entrez un numéro de téléphone à 10 chiffres">
+                    
                     <label for="email">Votre adresse e-mail</label>
                     <input type="email" id="email" name="email" tabindex="38" placeholder="Entrez votre email" required>
+                    
+                    <label for="sujet">Sujet du mail</label>
+                    <input type="text" id="sujet" name="sujet" tabindex="39" placeholder="Entrez le sujet du mail" required maxlength="100">
+                    
                     <label for="message">Quel est votre message ?</label>
-                    <textarea name="message" id="message" tabindex="39" placeholder="Entrez votre message" required minlength="10" maxlength="500"></textarea>
-                    <button type="submit" tabindex="40" id="btnEnvoyerMail" aria-label="Cliquer sur le bouton pour envoyer un email"  class="btn">Envoyer</button>
+                    <textarea name="message" id="message" tabindex="40" placeholder="Entrez votre message" required minlength="10" maxlength="500"></textarea>
+                    
+                    <button type="submit" tabindex="41" id="btnEnvoyerMail" aria-label="Cliquer sur le bouton pour envoyer un email" class="btn">Envoyer</button>
                 </form>
             </section>
+            
             <div class="icon-group">
                 <div class="linkedin">
                     <a href="https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/" target="_blank" title="Redirection vers le profil Linkedin de Koud Demaurisa Adnam" tabindex="41">
@@ -364,9 +369,6 @@
         </p>
     </footer>
 
-    <!-- <script src="../js/animation.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
     <script>
        // Sélectionne l'élément avec l'ID "year"
