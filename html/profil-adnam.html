@@ -346,18 +346,18 @@
         <div class="comment-form" tabindex="44">
             <h3>Laissez un commentaire et votre avis sur mon portfolio</h3>
             <form id="commentForm" method="post" action="">
-                <textarea name="comments" placeholder="Votre commentaire" tabindex="45" required></textarea>
+                <textarea name="comments" id="commentaire" placeholder="Votre commentaire" tabindex="45" required></textarea>
                 <div class="rating">
-                    <div class="stars" data-rating="0">
-                        <span class="star" tabindex="46" data-value="1">&starf;</span>
-                        <span class="star" tabindex="47" data-value="2">&starf;</span>
-                        <span class="star" tabindex="48" data-value="3">&starf;</span>
-                        <span class="star" tabindex="49" data-value="4">&starf;</span>
-                        <span class="star" tabindex="50" data-value="5">&starf;</span>
+                    <div class="stars" id="stars" data-rating="0">
+                        <span class="star" id="starOne" tabindex="46" data-value="1">&starf;</span>
+                        <span class="star" id="starTwo" tabindex="47" data-value="2">&starf;</span>
+                        <span class="star" id="starThree" tabindex="48" data-value="3">&starf;</span>
+                        <span class="star" id="starFour" tabindex="49" data-value="4">&starf;</span>
+                        <span class="star" id="starFive" tabindex="50" data-value="5">&starf;</span>
                     </div>
-                    <div class="rating-value">0 / 5</div>
+                    <div class="rating-value" id="ratingValue">0 / 5</div>
                 </div>
-                <button id="btnEnvoyerMail" type="submit" class="btn" aria-label="Cliquer sur le bouton pour envoyer votre commentaire et votre notation de mon portfolio" tabindex="51">Envoyer</button>
+                <button id="btnEnvoyerNotation" type="submit" class="btn" aria-label="Cliquer sur le bouton pour envoyer votre commentaire et votre notation de mon portfolio" tabindex="51">Envoyer</button>
             </form>
         </div>     
     </section>
