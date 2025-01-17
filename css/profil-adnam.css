@@ -16,7 +16,6 @@ nav ul li a {
     text-decoration: none;
     transition: color 0.3s;
     padding-right: 9px;
-
 }
 
 nav ul li a:hover {
@@ -182,7 +181,7 @@ body::before {
         radial-gradient(circle at 80% 80%, var(--color-red) 0%, transparent 50%),
         radial-gradient(circle at 50% 50%, var(--color-yellow) 0%, transparent 60%);
     opacity: 0.15;
-    filter: blur(120px);
+    /* filter: blur(120px); */
 }
 
 .hero-content {
@@ -200,9 +199,15 @@ body::before {
 }
 
 .name {
-    font-size: clamp(3rem, 10vw, 6rem);
-    font-weight: 700;
+    font-size: clamp(3rem, 10vw, 6rem); /* Définit une taille de police responsive : 
+    - minimum 3rem,
+    - maximum 6rem,
+    - proportionnelle à la largeur de la fenêtre (10vw). */    font-weight: 700;
     line-height: 1.1;
+    backface-visibility: hidden; /* Empêche l'affichage de l'arrière-plan lors des rotations ou transformations 3D. */
+    perspective: 1000px; /* Ajoute un effet de profondeur pour les transformations 3D. */
+    will-change: transform, opacity; /* Indique au navigateur que les propriétés 'transform' et 'opacity' de cet élément sont susceptibles de changer, 
+    permettant d'optimiser le rendu et d'assurer des animations plus fluides.  */
     background: linear-gradient(
         45deg,
         var(--color-green) 0%,
@@ -1205,21 +1210,25 @@ section:nth-child(even) .card {
 
 /* Animation du nom */
 @keyframes nameReveal {
-    0% {
+      0% {
         opacity: 0;
-        transform: scale(0.8) translateY(-50px);
-        filter: blur(10px);
+        -webkit-transform: scale(0.8) translateY(-50px); /* Préfixe Safari : réduit la taille (scale) et déplace vers le haut (-50px). */
+        transform: scale(0.8) translateY(-50px); /* Réduit la taille (scale) et déplace vers le haut (-50px). */
+        -webkit-filter: blur(10px); /* Préfixe pour Safari */
+        filter: blur(10px); /* Applique un flou de 10px. */
     }
     100% {
         opacity: 1;
-        transform: scale(1) translateY(0);
-        filter: blur(0);
+        -webkit-transform: scale(1) translateY(0); /* Préfixe Safari : rétablit la taille normale et remet le texte à sa position initiale. */
+        transform: scale(1) translateY(0); /* Rétablit la taille normale et remet le texte à sa position initiale. */
+        -webkit-filter: blur(0); /* Préfixe Safari : supprime le flou. */
+        filter: blur(0); /* Supprime le flou. */
     }
 }
 
 /* Amélioration du contraste */
-.name::after {
-    /* content: 'ADNAM KOUD'; */
+/* .name::after {
+    content: 'ADNAM KOUD DEMAURISA';
     position: absolute;
     top: 0;
     left: 0;
@@ -1233,7 +1242,7 @@ section:nth-child(even) .card {
     z-index: -1;
     filter: blur(8px);
     transform: translateY(2px);
-}
+} */
 
 /* Style 3D pour la carte de présentation */
 .presentation-content.card {
@@ -1401,6 +1410,7 @@ section:nth-child(even) .card {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    width: 100%;
     gap: 20px;
 }
 
@@ -1586,7 +1596,7 @@ form textarea {
 
 
     .project-card {
-        width: 400px; /* fixe la largeur de chaque carte */
+        width: 350px; /* fixe la largeur de chaque carte */
         margin: 20px;
         background: #CCB3B7;
         border-radius: 10px;
@@ -1722,13 +1732,18 @@ form textarea {
         cursor: pointer;
     }
 
+    .contact-form {
+        width: 350px;
+      
+    }
+
     .contact-form input, .contact-form textarea {
-        width: 90%;
+        width: 95%;
     }
 
     .contact-form button {
         padding: 10px 20px;
-        width: 90%;
+        width: 95%;
     }
 
     .comment-form {
@@ -1800,6 +1815,19 @@ form textarea {
         z-index: 10000;
         top: 5%;
         right: 10px;
+    }
+
+    .timeline-item {
+        width: 50%;
+    }
+
+    .timeline-content h3, p{
+        font-size: 13px;
+    }
+
+
+    #mobile-none {
+        display: none;
     }
 
 }

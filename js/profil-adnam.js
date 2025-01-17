@@ -225,7 +225,7 @@ function scriptNotation() {
 
         // Vérifie que le commentaire ou la notation du portfolio soit rempli
         if (!ratingValueNotation || !commentaire) {
-            alert("Veuillez donnez votre avis pour mon portfolio(mettre un commentaire, ou laisser une note) ! Votre avis est important pour moi. 😁");
+            alert("Veuillez donnez votre avis sur mon portfolio(mettre un commentaire, ou laisser une note) ! Votre avis est important pour moi. 😁");
             return;
         }
 
