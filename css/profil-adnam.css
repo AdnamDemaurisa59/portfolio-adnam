@@ -272,6 +272,50 @@ body::before {
     }
 }
 
+.download-btn {
+     display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #ABB3A4;
+      text-decoration: none;
+
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+    
+}
+
+.download-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.8s ease-in-out;
+}
+
+.download-btn:hover::before {
+    transform: scaleX(1);
+}
+
+.download-btn:hover {
+    background-color: #B4B9AF;
+    transform: translateY(-5px);
+    color: black;
+  }
+
 /* Scroll indicator amélioré */
 .scroll-indicator {
     position: absolute;
@@ -376,15 +420,6 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 3rem;
 }
-
-/* Projet Card modernisée */
-/* .project-card {
-    position: relative;
-    border-radius: 1rem;
-    overflow: hidden;
-    aspect-ratio: 16/9;
-    cursor: pointer;
-} */
 
 .project-image {
     width: 100%;
@@ -536,12 +571,6 @@ h2 {
     transform: translateY(-2px);
 }
 
-/* Contact Form Refinements */
-/* .contact-content {
-    max-width: 600px;
-    margin: 0 auto;
-} */
-
 textarea.form-input {
     resize: vertical;
     min-height: 150px;
@@ -587,25 +616,11 @@ textarea.form-input {
     overflow: hidden;
 }
 
-/* .presentation-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-} */
-
 .presentation-image {
     position: relative;
     border-radius: 1rem;
     /* overflow: hidden; */
 }
-
-/* .presentation-image img {
-    width: 80%;
-    height: 50%;
-    border-radius: 1rem;
-    border: 3px solid var(--color-blue);
-} */
 
 .presentation-content {
     padding: 2rem;
@@ -1226,24 +1241,6 @@ section:nth-child(even) .card {
     }
 }
 
-/* Amélioration du contraste */
-/* .name::after {
-    content: 'ADNAM KOUD DEMAURISA';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    opacity: 0.1;
-    z-index: -1;
-    filter: blur(8px);
-    transform: translateY(2px);
-} */
-
 /* Style 3D pour la carte de présentation */
 .presentation-content.card {
     transform-style: preserve-3d;
@@ -1319,7 +1316,6 @@ section:nth-child(even) .card {
 
 
 /* Section HTML - Projets */
-
 #projects {
     padding-top: 20px;
     padding-bottom: 0.5px;
@@ -1830,6 +1826,10 @@ form textarea {
         display: none;
     }
 
+    .download-btn {
+        display: none;
+    }
+
 }
 
 
@@ -1862,6 +1862,10 @@ form textarea {
         overflow: hidden;
         position: relative;
         width: 100vw;
+    }
+
+    .group-projects {
+        width: 100%;
     }
 
     .carousel-inner {
@@ -2020,5 +2024,4 @@ form textarea {
         height: 60%;
         border-radius: 50%; 
     }
-
 }
