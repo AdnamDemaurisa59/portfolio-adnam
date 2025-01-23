@@ -192,28 +192,35 @@
                         <p>Développement d'applications modernes</p>
                     </div>
                     <!-- Deuxième groupe (doublons pour l'effet infini) -->
-                    <div class="skill-card card">
+                    <div class="skill-card card skill-mobile" >
                         <a href="https://developer.mozilla.org/fr/docs/Glossary/HTML5" target="_blank"><i class="fab fa-html5"></i></a>
                         <a href="https://developer.mozilla.org/fr/docs/Glossary/HTML5" target="_blank"><h3>HTML5</h3>
                         </a>
                         <p>Structure sémantique et accessible</p>
                     </div>
-                    <div class="skill-card card">
+                    <div class="skill-card card skill-mobile">
                         <a href="https://developer.mozilla.org/fr/docs/Web/CSS" target="_blank"><i class="fab fa-css3-alt"></i></a>        
                         <a href="https://developer.mozilla.org/fr/docs/Web/CSS" target="_blank"><h3>CSS3</h3></a>                        
                         <p>Styles modernes et animations</p>
                     </div>
-                    <div class="skill-card card">
+                    <div class="skill-card card skill-mobile">
                         <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank"><i class="fab fa-js"></i></a>
                         <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank"><h3>JavaScript</h3></a>
                         <p>Interactivité et animations dynamiques</p>
                     </div>
-                    <div class="skill-card card">
+                    <div class="skill-card card skill-mobile">
                         <a href="https://fr.vuejs.org/guide/introduction" target="_blank"><i class="fa-brands fa-vuejs"></i></a>
                         <a href="https://fr.vuejs.org/guide/introduction" target="_blank"><h3>Vue.JS</h3></a>
                         <p>Développement d'applications modernes</p>
                     </div>
                 </div>
+            </div>
+            <!-- Points de navigation -->
+            <div class="carousel-nav">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
             </div>
         </div>
     </section>
@@ -382,6 +389,34 @@
 
         // Insère l'année dans le footer
         yearSpan.textContent = currentYear;
+    </script>
+
+    <script>
+// Sélection des éléments
+const skillCards = document.querySelectorAll('.skill-card');
+const dots = document.querySelectorAll('.carousel-nav .dot');
+
+// Fonction pour afficher une compétence
+function showSkill(index) {
+  // Masquer toutes les compétences
+  skillCards.forEach(card => card.classList.remove('active'));
+  // Afficher la compétence sélectionnée
+  skillCards[index].classList.add('active');
+
+  // Mettre à jour les points actifs
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[index].classList.add('active');
+}
+
+// Ajouter des événements sur les points
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => showSkill(index));
+});
+
+// Afficher la première compétence par défaut
+showSkill(0);
+
+
     </script>
 
 </body>

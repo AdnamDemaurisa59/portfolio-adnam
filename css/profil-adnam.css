@@ -409,17 +409,7 @@ h2 {
 }
 
 /* Grilles modernisées */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 3rem;
-}
 
 .project-image {
     width: 100%;
@@ -428,19 +418,7 @@ h2 {
     transition: transform 0.5s ease;
 }
 
-.project-overlay {
-    position: absolute;
-    inset: 0;
-    background: var(--glass-bg);
-    backdrop-filter: blur(5px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+
 
 .project-title {
     font-size: 1.5rem;
@@ -448,10 +426,6 @@ h2 {
     margin-bottom: 1rem;
 }
 
-.project-description {
-    text-align: center;
-    line-height: 1.6;
-}
 
 /* Formulaire modernisé */
 .contact-form {
@@ -586,7 +560,7 @@ textarea.form-input {
     transform: scale(1.1);
 }
 
-.project-card:hover .project-overlay {
+.project-card:hover {
     opacity: 1;
 }
 
@@ -736,24 +710,17 @@ textarea.form-input {
 }
 
 /* Skills Slider */
-.skills-slider {
+/* .skills-slider {
     position: relative;
     width: 100%;
     overflow: hidden;
     padding: 2rem 0;
     margin: 0 auto;
-}
+} */
 
 .skills-slider a {
     z-index: 10;
     text-decoration: none;
-}
-
-.skills-track {
-    display: flex;
-    gap: 2rem;
-    padding: 1rem;
-    width: fit-content;
 }
 
 .skill-card {
@@ -1543,39 +1510,6 @@ form textarea {
     header nav ul {
         display: none;
     }
-
-    /* .presentation a, .presentation2 a{
-        font-size: 20px;
-    } */
-
-    .separation, .separation2 {
-        height: 100px;
-        width: 5px;
-    }
-
-    .skills {
-        padding: 20px;
-        background-color: #ededed;
-        height: 700px;
-        width: 100%;
-    }
-
-    .container-skills {
-        display: flex;
-        justify-content: center;
-        /* align-items: center; */
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .langue-speak {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 60px;
-        padding-top: 30px;
-    }
    
     .projects-container {
         overflow: hidden;
@@ -1830,6 +1764,63 @@ form textarea {
         display: none;
     }
 
+
+/* Conteneur principal */
+.skills-slider {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+
+  .skills-track {
+    padding: 2rem;
+    /* width: 100%; */
+    height: 300px;
+}
+  
+  /* Cartes des compétences */
+  .skill-card {
+    display: none; /* Masquer toutes les compétences par défaut */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    cursor: pointer;
+    width: 300px;
+    height: 230px;
+  }
+
+
+  
+  .skill-card.active {
+    display: block; /* Afficher uniquement la compétence active */
+    opacity: 1;
+  }
+  
+  /* Points de navigation */
+  .carousel-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .carousel-nav .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .carousel-nav .dot.active {
+    background-color: #333;
+  }
+
+  .skill-mobile {
+    display: none;
+  }
+  
+
 }
 
 
@@ -1847,6 +1838,13 @@ form textarea {
         text-align: center;
         width: 100%;
         height: 470px;
+    }
+
+    .skills-track {
+        display: flex;
+        gap: 2rem;
+        padding: 1rem;
+        width: fit-content;
     }
     
     .container-skills {
@@ -1988,6 +1986,13 @@ form textarea {
         to {
             transform: translateX(-100%); /* ajuste le pourcentage en fonction de la longueur de la duplicata */
         }
+    }
+
+    .skills-track {
+        display: flex;
+        gap: 2rem;
+        padding: 1rem;
+        width: fit-content;
     }
 
     .container-skills {

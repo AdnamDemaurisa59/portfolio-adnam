@@ -23,10 +23,12 @@ function initSectionAnimations() {
     });
 }
 
+// Vérifie si l'écran est un écran mobile
+const isMobileSkills = window.matchMedia("(max-width: 768px)");
 // Animation du slider de compétences améliorée
 function initSkillsSlider() {
     const track = document.querySelector('.skills-track');
-    if (!track) return;
+    if (!track || isMobileSkills.matches) return;
 
     // Duplique les cartes pour un défilement infini
     const cards = track.children;
@@ -250,13 +252,13 @@ const observer = new IntersectionObserver((entries) => {
 
 
 // Vérifie si l'écran est un écran mobile
-const isMobile = window.matchMedia("(max-width: 750px)");
+const isMobileProjects = window.matchMedia("(max-width: 768px)");
 
 // Fonction permettant d'ajouter les cartes au gestionnaire d'observation
 function handleCardsOnMobile() {
-    // const isMobile = window.matchMedia("(max-width: 750px)");
+    // const isMobileProjects = window.matchMedia("(max-width: 768px)");
     const projectCards = document.querySelectorAll(".project-card");
-    if (isMobile.matches) { // Vérification si on est sur un écran mobile
+    if (isMobileProjects.matches) { // Vérification si on est sur un écran mobile
         projectCards.forEach(card => {
             card.style.transition = "transform 0.5s, opacity 0.5s"; // Assure une transition
             // card.style.transform = 'translateX(20px)'; // Décalage
@@ -279,4 +281,4 @@ handleCardsOnMobile();
 window.addEventListener("resize", handleCardsOnMobile);
 
 // Ce code permet de détecter les changements dynamiques
-isMobile.addEventListener("change", handleCardsOnMobile);
+isMobileProjects.addEventListener("change", handleCardsOnMobile);
