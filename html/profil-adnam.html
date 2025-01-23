@@ -392,31 +392,27 @@
     </script>
 
     <script>
-// Sélection des éléments
-const skillCards = document.querySelectorAll('.skill-card');
-const dots = document.querySelectorAll('.carousel-nav .dot');
+        const skillCards = document.querySelectorAll('.skill-card');
+        const dots = document.querySelectorAll('.carousel-nav .dot');
 
-// Fonction pour afficher une compétence
-function showSkill(index) {
-  // Masquer toutes les compétences
-  skillCards.forEach(card => card.classList.remove('active'));
-  // Afficher la compétence sélectionnée
-  skillCards[index].classList.add('active');
+        function showSkill(index) {
+        // Masque toutes les compétences
+        skillCards.forEach(card => card.classList.remove('active'));
+        // Affiche la compétence sélectionnée
+        skillCards[index].classList.add('active');
 
-  // Mettre à jour les points actifs
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[index].classList.add('active');
-}
+        // Met à jour les points actifs
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[index].classList.add('active');
+        }
 
-// Ajouter des événements sur les points
-dots.forEach((dot, index) => {
-  dot.addEventListener('click', () => showSkill(index));
-});
+        // Ajoute des événements sur les points
+        dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => showSkill(index));
+        });
 
-// Afficher la première compétence par défaut
-showSkill(0);
-
-
+        // Affiche la première compétence par défaut
+        showSkill(0);
     </script>
 
 </body>
