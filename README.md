@@ -18,6 +18,6 @@ Je m'appelle Adnam Koud Demaurisa. Je suis actuellement étudiant en développem
 Pour me contacter :
 
 Email : adnam.kouddemaurisa@outlook.fr
-LinkedIn : [https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/]
+LinkedIn : https://www.linkedin.com/in/adnam-koud-demaurisa-447379194/
 
 Merci de visiter mon portfolio, et n'hésitez pas à me contacter pour toute collaboration ou opportunité ! 🚀
